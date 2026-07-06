@@ -1,0 +1,2530 @@
+{
+ "bg1": {
+  "pool": "burger",
+  "index": 1
+ },
+ "bg2": {
+  "pool": "burger",
+  "index": 2
+ },
+ "tb2": {
+  "prefix": "feane__",
+  "suffix": "_f7.png"
+ },
+ "tb8": {
+  "prefix": "themewagon_burgerking",
+  "suffix": "_single.jpg"
+ },
+ "bg3": {
+  "pool": "burger",
+  "index": 3
+ },
+ "bg4": {
+  "pool": "burger",
+  "index": 4
+ },
+ "tb12": {
+  "prefix": "themewagon_burgerking",
+  "suffix": "_blog-1.jpg"
+ },
+ "grill9": {
+  "prefix": "foodie__",
+  "suffix": "_food-menu-3.png"
+ },
+ "fried1": {
+  "prefix": "feliciano__",
+  "suffix": "_lunch-3.jpg"
+ },
+ "fries1": {
+  "prefix": "feane__",
+  "suffix": "_f5.png"
+ },
+ "fries2": {
+  "prefix": "themewagon_burgerking",
+  "suffix": "_feature-3.jpg"
+ },
+ "dt1": {
+  "pool": "dessert",
+  "index": 1
+ },
+ "des5": {
+  "prefix": "feliciano__",
+  "suffix": "_dessert-5.jpg"
+ },
+ "des4": {
+  "prefix": "feliciano__",
+  "suffix": "_dessert-4.jpg"
+ },
+ "bev1": {
+  "prefix": "feliciano__",
+  "suffix": "_drink-4.jpg"
+ },
+ "cafe1": {
+  "prefix": "themewagon_koppee",
+  "suffix": "_carousel-1.jpg"
+ },
+ "bg5": {
+  "pool": "burger",
+  "index": 5
+ },
+ "sand2": {
+  "prefix": "themewagon_burgerking",
+  "suffix": "_feature-4.jpg"
+ },
+ "sand3": {
+  "prefix": "feliciano__",
+  "suffix": "_dinner-6.jpg"
+ },
+ "bg6": {
+  "pool": "burger",
+  "index": 6
+ },
+ "dt2": {
+  "pool": "dessert",
+  "index": 2
+ },
+ "bg7": {
+  "pool": "burger",
+  "index": 7
+ },
+ "dt3": {
+  "pool": "dessert",
+  "index": 3
+ },
+ "bg8": {
+  "pool": "burger",
+  "index": 8
+ },
+ "bg9": {
+  "pool": "burger",
+  "index": 9
+ },
+ "dt4": {
+  "pool": "dessert",
+  "index": 4
+ },
+ "bg10": {
+  "pool": "burger",
+  "index": 10
+ },
+ "dt5": {
+  "pool": "dessert",
+  "index": 5
+ },
+ "bg11": {
+  "pool": "burger",
+  "index": 11
+ },
+ "dt6": {
+  "pool": "dessert",
+  "index": 6
+ },
+ "dt7": {
+  "pool": "dessert",
+  "index": 7
+ },
+ "bg12": {
+  "pool": "burger",
+  "index": 12
+ },
+ "dt8": {
+  "pool": "dessert",
+  "index": 8
+ },
+ "bg13": {
+  "pool": "burger",
+  "index": 13
+ },
+ "tb7": {
+  "prefix": "themewagon_burgerking",
+  "suffix": "_carousel-1.jpg"
+ },
+ "grill8": {
+  "prefix": "grilli__",
+  "suffix": "_special-dish-banner.jpg"
+ },
+ "grill5": {
+  "prefix": "grilli__",
+  "suffix": "_service-2.jpg"
+ },
+ "fried2": {
+  "prefix": "feliciano__",
+  "suffix": "_breakfast-5.jpg"
+ },
+ "tb3": {
+  "prefix": "feane__",
+  "suffix": "_f8.png"
+ },
+ "bg14": {
+  "pool": "burger",
+  "index": 14
+ },
+ "tb6": {
+  "prefix": "themewagon_burgerking",
+  "suffix": "_feature-1.jpg"
+ },
+ "tb9": {
+  "prefix": "themewagon_delicious",
+  "suffix": "_blog-img_3.jpg"
+ },
+ "crepe1": {
+  "prefix": "restaurant-hugo__",
+  "suffix": "_slider-img-4.jpg"
+ },
+ "dt9": {
+  "pool": "dessert",
+  "index": 9
+ },
+ "soup5": {
+  "prefix": "restaurant-hugo__",
+  "suffix": "_blog-img-1.jpg"
+ },
+ "jc8": {
+  "prefix": "themewagon_burgerking",
+  "suffix": "_menu-beverage-img.jpg"
+ },
+ "cafe6": {
+  "prefix": "themewagon_coffee@",
+  "suffix": "_img_b1.jpg"
+ },
+ "roll1": {
+  "prefix": "foodie__",
+  "suffix": "_blog-1.jpg"
+ },
+ "bg15": {
+  "pool": "burger",
+  "index": 15
+ },
+ "dt10": {
+  "pool": "dessert",
+  "index": 10
+ },
+ "bg16": {
+  "pool": "burger",
+  "index": 16
+ },
+ "dt11": {
+  "pool": "dessert",
+  "index": 11
+ },
+ "bg17": {
+  "pool": "burger",
+  "index": 17
+ },
+ "bg18": {
+  "pool": "burger",
+  "index": 18
+ },
+ "dt12": {
+  "pool": "dessert",
+  "index": 12
+ },
+ "dt13": {
+  "pool": "dessert",
+  "index": 13
+ },
+ "bg19": {
+  "pool": "burger",
+  "index": 19
+ },
+ "dt14": {
+  "pool": "dessert",
+  "index": 14
+ },
+ "dt15": {
+  "pool": "dessert",
+  "index": 15
+ },
+ "bg20": {
+  "pool": "burger",
+  "index": 20
+ },
+ "dt16": {
+  "pool": "dessert",
+  "index": 16
+ },
+ "bg21": {
+  "pool": "burger",
+  "index": 21
+ },
+ "tb4": {
+  "prefix": "themewagon_burgerking",
+  "suffix": "_menu-burger-img.jpg"
+ },
+ "tb11": {
+  "prefix": "foodie__",
+  "suffix": "_hero-banner.png"
+ },
+ "bg22": {
+  "pool": "burger",
+  "index": 22
+ },
+ "bg23": {
+  "pool": "burger",
+  "index": 23
+ },
+ "dt17": {
+  "pool": "dessert",
+  "index": 17
+ },
+ "bg24": {
+  "pool": "burger",
+  "index": 24
+ },
+ "dt18": {
+  "pool": "dessert",
+  "index": 18
+ },
+ "bg25": {
+  "pool": "burger",
+  "index": 25
+ },
+ "dt19": {
+  "pool": "dessert",
+  "index": 19
+ },
+ "dt20": {
+  "pool": "dessert",
+  "index": 20
+ },
+ "dt21": {
+  "pool": "dessert",
+  "index": 21
+ },
+ "bg26": {
+  "pool": "burger",
+  "index": 26
+ },
+ "dt22": {
+  "pool": "dessert",
+  "index": 22
+ },
+ "bg27": {
+  "pool": "burger",
+  "index": 27
+ },
+ "dt23": {
+  "pool": "dessert",
+  "index": 23
+ },
+ "bg28": {
+  "pool": "burger",
+  "index": 28
+ },
+ "dt24": {
+  "pool": "dessert",
+  "index": 24
+ },
+ "bg29": {
+  "pool": "burger",
+  "index": 29
+ },
+ "dt25": {
+  "pool": "dessert",
+  "index": 25
+ },
+ "dt26": {
+  "pool": "dessert",
+  "index": 26
+ },
+ "bg30": {
+  "pool": "burger",
+  "index": 30
+ },
+ "bg31": {
+  "pool": "burger",
+  "index": 31
+ },
+ "bg32": {
+  "pool": "burger",
+  "index": 32
+ },
+ "dt27": {
+  "pool": "dessert",
+  "index": 27
+ },
+ "bg33": {
+  "pool": "burger",
+  "index": 33
+ },
+ "bg34": {
+  "pool": "burger",
+  "index": 34
+ },
+ "bg35": {
+  "pool": "burger",
+  "index": 35
+ },
+ "bg36": {
+  "pool": "burger",
+  "index": 36
+ },
+ "bg37": {
+  "pool": "burger",
+  "index": 37
+ },
+ "grill7": {
+  "prefix": "feliciano__",
+  "suffix": "_lunch-2.jpg"
+ },
+ "dt28": {
+  "pool": "dessert",
+  "index": 28
+ },
+ "bg38": {
+  "pool": "burger",
+  "index": 38
+ },
+ "dt29": {
+  "pool": "dessert",
+  "index": 29
+ },
+ "bg39": {
+  "pool": "burger",
+  "index": 39
+ },
+ "dt30": {
+  "pool": "dessert",
+  "index": 30
+ },
+ "bg40": {
+  "pool": "burger",
+  "index": 40
+ },
+ "dt31": {
+  "pool": "dessert",
+  "index": 31
+ },
+ "dt32": {
+  "pool": "dessert",
+  "index": 32
+ },
+ "bg41": {
+  "pool": "burger",
+  "index": 41
+ },
+ "dt33": {
+  "pool": "dessert",
+  "index": 33
+ },
+ "bg42": {
+  "pool": "burger",
+  "index": 42
+ },
+ "dt34": {
+  "pool": "dessert",
+  "index": 34
+ },
+ "bg43": {
+  "pool": "burger",
+  "index": 43
+ },
+ "dt35": {
+  "pool": "dessert",
+  "index": 35
+ },
+ "bg44": {
+  "pool": "burger",
+  "index": 44
+ },
+ "dt36": {
+  "pool": "dessert",
+  "index": 36
+ },
+ "bg45": {
+  "pool": "burger",
+  "index": 45
+ },
+ "bg46": {
+  "pool": "burger",
+  "index": 46
+ },
+ "bg47": {
+  "pool": "burger",
+  "index": 47
+ },
+ "bg48": {
+  "pool": "burger",
+  "index": 48
+ },
+ "bg49": {
+  "pool": "burger",
+  "index": 49
+ },
+ "bg50": {
+  "pool": "burger",
+  "index": 50
+ },
+ "bg51": {
+  "pool": "burger",
+  "index": 51
+ },
+ "bg52": {
+  "pool": "burger",
+  "index": 52
+ },
+ "bg53": {
+  "pool": "burger",
+  "index": 53
+ },
+ "bg54": {
+  "pool": "burger",
+  "index": 54
+ },
+ "bg55": {
+  "pool": "burger",
+  "index": 55
+ },
+ "bg56": {
+  "pool": "burger",
+  "index": 56
+ },
+ "bg57": {
+  "pool": "burger",
+  "index": 57
+ },
+ "bg58": {
+  "pool": "burger",
+  "index": 58
+ },
+ "bg59": {
+  "pool": "burger",
+  "index": 59
+ },
+ "bg60": {
+  "pool": "burger",
+  "index": 60
+ },
+ "bg61": {
+  "pool": "burger",
+  "index": 61
+ },
+ "bg62": {
+  "pool": "burger",
+  "index": 62
+ },
+ "bg63": {
+  "pool": "burger",
+  "index": 63
+ },
+ "bg64": {
+  "pool": "burger",
+  "index": 64
+ },
+ "bg65": {
+  "pool": "burger",
+  "index": 65
+ },
+ "bg66": {
+  "pool": "burger",
+  "index": 66
+ },
+ "bg67": {
+  "pool": "burger",
+  "index": 67
+ },
+ "bg68": {
+  "pool": "burger",
+  "index": 68
+ },
+ "bg69": {
+  "pool": "burger",
+  "index": 69
+ },
+ "bg70": {
+  "pool": "burger",
+  "index": 70
+ },
+ "bg71": {
+  "pool": "burger",
+  "index": 71
+ },
+ "bg72": {
+  "pool": "burger",
+  "index": 72
+ },
+ "ds1": {
+  "pool": "dosa",
+  "index": 1
+ },
+ "drk1": {
+  "prefix": "feliciano__",
+  "suffix": "_drink-1.jpg"
+ },
+ "drk2": {
+  "prefix": "feliciano__",
+  "suffix": "_drink-2.jpg"
+ },
+ "bg73": {
+  "pool": "burger",
+  "index": 73
+ },
+ "bg74": {
+  "pool": "burger",
+  "index": 74
+ },
+ "bg75": {
+  "pool": "burger",
+  "index": 75
+ },
+ "bg76": {
+  "pool": "burger",
+  "index": 76
+ },
+ "bg77": {
+  "pool": "burger",
+  "index": 77
+ },
+ "bg78": {
+  "pool": "burger",
+  "index": 78
+ },
+ "bg79": {
+  "pool": "burger",
+  "index": 79
+ },
+ "bg80": {
+  "pool": "burger",
+  "index": 80
+ },
+ "bg81": {
+  "pool": "burger",
+  "index": 81
+ },
+ "bg82": {
+  "pool": "burger",
+  "index": 82
+ },
+ "bg83": {
+  "pool": "burger",
+  "index": 83
+ },
+ "bg84": {
+  "pool": "burger",
+  "index": 84
+ },
+ "bg85": {
+  "pool": "burger",
+  "index": 85
+ },
+ "pz1": {
+  "pool": "pizza",
+  "index": 1
+ },
+ "pz2": {
+  "pool": "pizza",
+  "index": 2
+ },
+ "pz3": {
+  "pool": "pizza",
+  "index": 3
+ },
+ "pz4": {
+  "pool": "pizza",
+  "index": 4
+ },
+ "pz5": {
+  "pool": "pizza",
+  "index": 5
+ },
+ "pz6": {
+  "pool": "pizza",
+  "index": 6
+ },
+ "pz7": {
+  "pool": "pizza",
+  "index": 7
+ },
+ "pzt1": {
+  "prefix": "feane__",
+  "suffix": "_f3.png"
+ },
+ "pzt2": {
+  "prefix": "feane__",
+  "suffix": "_f6.png"
+ },
+ "pzt5": {
+  "prefix": "themewagon_pato",
+  "suffix": "_blog-06.jpg"
+ },
+ "pzt6": {
+  "prefix": "themewagon_pato",
+  "suffix": "_blog-15.jpg"
+ },
+ "ps1": {
+  "pool": "pasta",
+  "index": 1
+ },
+ "ps2": {
+  "pool": "pasta",
+  "index": 2
+ },
+ "ps3": {
+  "pool": "pasta",
+  "index": 3
+ },
+ "rc1": {
+  "pool": "rice",
+  "index": 1
+ },
+ "sal2": {
+  "prefix": "themewagon_burgerking",
+  "suffix": "_menu-snack-img.jpg"
+ },
+ "cake2": {
+  "prefix": "themewagon_pato",
+  "suffix": "_our-menu-18.jpg"
+ },
+ "des3": {
+  "prefix": "feliciano__",
+  "suffix": "_dessert-3.jpg"
+ },
+ "pz8": {
+  "pool": "pizza",
+  "index": 8
+ },
+ "ps4": {
+  "pool": "pasta",
+  "index": 4
+ },
+ "pz9": {
+  "pool": "pizza",
+  "index": 9
+ },
+ "ps5": {
+  "pool": "pasta",
+  "index": 5
+ },
+ "pz10": {
+  "pool": "pizza",
+  "index": 10
+ },
+ "pz11": {
+  "pool": "pizza",
+  "index": 11
+ },
+ "pz12": {
+  "pool": "pizza",
+  "index": 12
+ },
+ "ps6": {
+  "pool": "pasta",
+  "index": 6
+ },
+ "ps7": {
+  "pool": "pasta",
+  "index": 7
+ },
+ "pz13": {
+  "pool": "pizza",
+  "index": 13
+ },
+ "ps8": {
+  "pool": "pasta",
+  "index": 8
+ },
+ "pz14": {
+  "pool": "pizza",
+  "index": 14
+ },
+ "ps9": {
+  "pool": "pasta",
+  "index": 9
+ },
+ "pz15": {
+  "pool": "pizza",
+  "index": 15
+ },
+ "ps10": {
+  "pool": "pasta",
+  "index": 10
+ },
+ "pz16": {
+  "pool": "pizza",
+  "index": 16
+ },
+ "pz17": {
+  "pool": "pizza",
+  "index": 17
+ },
+ "pz18": {
+  "pool": "pizza",
+  "index": 18
+ },
+ "pzt4": {
+  "prefix": "foodie__",
+  "suffix": "_banner-4.jpg"
+ },
+ "pz19": {
+  "pool": "pizza",
+  "index": 19
+ },
+ "pz20": {
+  "pool": "pizza",
+  "index": 20
+ },
+ "pz21": {
+  "pool": "pizza",
+  "index": 21
+ },
+ "pz22": {
+  "pool": "pizza",
+  "index": 22
+ },
+ "pz23": {
+  "pool": "pizza",
+  "index": 23
+ },
+ "pz24": {
+  "pool": "pizza",
+  "index": 24
+ },
+ "pzt7": {
+  "prefix": "feane__",
+  "suffix": "_o2.jpg"
+ },
+ "pz25": {
+  "pool": "pizza",
+  "index": 25
+ },
+ "bread": {
+  "prefix": "themewagon_pato",
+  "suffix": "_dinner-05.jpg"
+ },
+ "sal1": {
+  "prefix": "restaurant-hugo__",
+  "suffix": "_blog-img-6.jpg"
+ },
+ "drk3": {
+  "prefix": "feliciano__",
+  "suffix": "_drink-3.jpg"
+ },
+ "pz26": {
+  "pool": "pizza",
+  "index": 26
+ },
+ "ps11": {
+  "pool": "pasta",
+  "index": 11
+ },
+ "pz27": {
+  "pool": "pizza",
+  "index": 27
+ },
+ "ps12": {
+  "pool": "pasta",
+  "index": 12
+ },
+ "pz28": {
+  "pool": "pizza",
+  "index": 28
+ },
+ "ps13": {
+  "pool": "pasta",
+  "index": 13
+ },
+ "ps14": {
+  "pool": "pasta",
+  "index": 14
+ },
+ "pz29": {
+  "pool": "pizza",
+  "index": 29
+ },
+ "pz30": {
+  "pool": "pizza",
+  "index": 30
+ },
+ "ps15": {
+  "pool": "pasta",
+  "index": 15
+ },
+ "pz31": {
+  "pool": "pizza",
+  "index": 31
+ },
+ "ps16": {
+  "pool": "pasta",
+  "index": 16
+ },
+ "pz32": {
+  "pool": "pizza",
+  "index": 32
+ },
+ "ps17": {
+  "pool": "pasta",
+  "index": 17
+ },
+ "pz33": {
+  "pool": "pizza",
+  "index": 33
+ },
+ "pz34": {
+  "pool": "pizza",
+  "index": 34
+ },
+ "pz35": {
+  "pool": "pizza",
+  "index": 35
+ },
+ "ps18": {
+  "pool": "pasta",
+  "index": 18
+ },
+ "pz36": {
+  "pool": "pizza",
+  "index": 36
+ },
+ "pz37": {
+  "pool": "pizza",
+  "index": 37
+ },
+ "pz38": {
+  "pool": "pizza",
+  "index": 38
+ },
+ "pz39": {
+  "pool": "pizza",
+  "index": 39
+ },
+ "ps19": {
+  "pool": "pasta",
+  "index": 19
+ },
+ "pz40": {
+  "pool": "pizza",
+  "index": 40
+ },
+ "ps20": {
+  "pool": "pasta",
+  "index": 20
+ },
+ "pz41": {
+  "pool": "pizza",
+  "index": 41
+ },
+ "ps21": {
+  "pool": "pasta",
+  "index": 21
+ },
+ "ps22": {
+  "pool": "pasta",
+  "index": 22
+ },
+ "ps23": {
+  "pool": "pasta",
+  "index": 23
+ },
+ "ps24": {
+  "pool": "pasta",
+  "index": 24
+ },
+ "ps25": {
+  "pool": "pasta",
+  "index": 25
+ },
+ "lasagna": {
+  "prefix": "feane__",
+  "suffix": "_f9.png"
+ },
+ "pz42": {
+  "pool": "pizza",
+  "index": 42
+ },
+ "rc2": {
+  "pool": "rice",
+  "index": 2
+ },
+ "rc3": {
+  "pool": "rice",
+  "index": 3
+ },
+ "soup3": {
+  "prefix": "restaurant-hugo__",
+  "suffix": "_header.jpg"
+ },
+ "soup2": {
+  "prefix": "themewagon_delicious",
+  "suffix": "_bg-img_r4.jpg"
+ },
+ "sal3": {
+  "prefix": "feliciano__",
+  "suffix": "_breakfast-2.jpg"
+ },
+ "sal5": {
+  "prefix": "themewagon_pato",
+  "suffix": "_lunch-01.jpg"
+ },
+ "pz43": {
+  "pool": "pizza",
+  "index": 43
+ },
+ "ps26": {
+  "pool": "pasta",
+  "index": 26
+ },
+ "pz44": {
+  "pool": "pizza",
+  "index": 44
+ },
+ "ps27": {
+  "pool": "pasta",
+  "index": 27
+ },
+ "pz45": {
+  "pool": "pizza",
+  "index": 45
+ },
+ "ps28": {
+  "pool": "pasta",
+  "index": 28
+ },
+ "pz46": {
+  "pool": "pizza",
+  "index": 46
+ },
+ "ps29": {
+  "pool": "pasta",
+  "index": 29
+ },
+ "pz47": {
+  "pool": "pizza",
+  "index": 47
+ },
+ "pz48": {
+  "pool": "pizza",
+  "index": 48
+ },
+ "ps30": {
+  "pool": "pasta",
+  "index": 30
+ },
+ "pz49": {
+  "pool": "pizza",
+  "index": 49
+ },
+ "pz50": {
+  "pool": "pizza",
+  "index": 50
+ },
+ "ps31": {
+  "pool": "pasta",
+  "index": 31
+ },
+ "pz51": {
+  "pool": "pizza",
+  "index": 51
+ },
+ "ps32": {
+  "pool": "pasta",
+  "index": 32
+ },
+ "pz52": {
+  "pool": "pizza",
+  "index": 52
+ },
+ "pz53": {
+  "pool": "pizza",
+  "index": 53
+ },
+ "ps33": {
+  "pool": "pasta",
+  "index": 33
+ },
+ "pz54": {
+  "pool": "pizza",
+  "index": 54
+ },
+ "pz55": {
+  "pool": "pizza",
+  "index": 55
+ },
+ "pz56": {
+  "pool": "pizza",
+  "index": 56
+ },
+ "pz57": {
+  "pool": "pizza",
+  "index": 57
+ },
+ "ps34": {
+  "pool": "pasta",
+  "index": 34
+ },
+ "pasta-salad": {
+  "prefix": "feane__",
+  "suffix": "_f4.png"
+ },
+ "soup4": {
+  "prefix": "themewagon_delicious",
+  "suffix": "_bg-img_r1.jpg"
+ },
+ "pz58": {
+  "pool": "pizza",
+  "index": 58
+ },
+ "pz59": {
+  "pool": "pizza",
+  "index": 59
+ },
+ "pz60": {
+  "pool": "pizza",
+  "index": 60
+ },
+ "pz61": {
+  "pool": "pizza",
+  "index": 61
+ },
+ "pz62": {
+  "pool": "pizza",
+  "index": 62
+ },
+ "pz63": {
+  "pool": "pizza",
+  "index": 63
+ },
+ "pz64": {
+  "pool": "pizza",
+  "index": 64
+ },
+ "pz65": {
+  "pool": "pizza",
+  "index": 65
+ },
+ "pz66": {
+  "pool": "pizza",
+  "index": 66
+ },
+ "pz67": {
+  "pool": "pizza",
+  "index": 67
+ },
+ "pz68": {
+  "pool": "pizza",
+  "index": 68
+ },
+ "pz69": {
+  "pool": "pizza",
+  "index": 69
+ },
+ "pz70": {
+  "pool": "pizza",
+  "index": 70
+ },
+ "pz71": {
+  "pool": "pizza",
+  "index": 71
+ },
+ "pz72": {
+  "pool": "pizza",
+  "index": 72
+ },
+ "pz73": {
+  "pool": "pizza",
+  "index": 73
+ },
+ "pz74": {
+  "pool": "pizza",
+  "index": 74
+ },
+ "pz75": {
+  "pool": "pizza",
+  "index": 75
+ },
+ "pz76": {
+  "pool": "pizza",
+  "index": 76
+ },
+ "pz77": {
+  "pool": "pizza",
+  "index": 77
+ },
+ "cafe4": {
+  "prefix": "themewagon_koppee",
+  "suffix": "_service-3.jpg"
+ },
+ "cafe2": {
+  "prefix": "themewagon_koppee",
+  "suffix": "_menu-2.jpg"
+ },
+ "cafe3": {
+  "prefix": "themewagon_koppee",
+  "suffix": "_menu-3.jpg"
+ },
+ "cafe8": {
+  "prefix": "themewagon_coffee@",
+  "suffix": "_img_g1.jpg"
+ },
+ "cafe7": {
+  "prefix": "themewagon_coffee@",
+  "suffix": "_img_g5.jpg"
+ },
+ "tea7": {
+  "prefix": "themewagon_teahouse",
+  "suffix": "_about-2.jpg"
+ },
+ "jc1": {
+  "prefix": "themewagon_delicious",
+  "suffix": "_bg-img_bg7.jpg"
+ },
+ "tea3": {
+  "prefix": "themewagon_teahouse",
+  "suffix": "_about-4.jpg"
+ },
+ "cake1": {
+  "prefix": "themewagon_pato",
+  "suffix": "_our-menu-19.jpg"
+ },
+ "sand1": {
+  "prefix": "foodie__",
+  "suffix": "_blog-2.jpg"
+ },
+ "cafe5": {
+  "prefix": "themewagon_koppee",
+  "suffix": "_service-4.jpg"
+ },
+ "cafe11": {
+  "prefix": "themewagon_koppee",
+  "suffix": "_menu-1.jpg"
+ },
+ "cafe9": {
+  "prefix": "themewagon_coffee@",
+  "suffix": "_img_g2.jpg"
+ },
+ "cafe10": {
+  "prefix": "themewagon_koppee",
+  "suffix": "_carousel-2.jpg"
+ },
+ "tea6": {
+  "prefix": "themewagon_teahouse",
+  "suffix": "_about-1.jpg"
+ },
+ "jc4": {
+  "prefix": "themewagon_delicious",
+  "suffix": "_bg-img_r3.jpg"
+ },
+ "drk6": {
+  "prefix": "feliciano__",
+  "suffix": "_drink-6.jpg"
+ },
+ "jc7": {
+  "prefix": "themewagon_burgerking",
+  "suffix": "_blog-4.jpg"
+ },
+ "drk7": {
+  "prefix": "feliciano__",
+  "suffix": "_drink-7.jpg"
+ },
+ "drk5": {
+  "prefix": "feliciano__",
+  "suffix": "_drink-5.jpg"
+ },
+ "tea1": {
+  "prefix": "themewagon_teahouse",
+  "suffix": "_product-4.jpg"
+ },
+ "jc3": {
+  "prefix": "themewagon_delicious",
+  "suffix": "_blog-img_2.jpg"
+ },
+ "jc6": {
+  "prefix": "themewagon_vegefoods",
+  "suffix": "_category-3.jpg"
+ },
+ "jc5": {
+  "prefix": "themewagon_vegefoods",
+  "suffix": "_product-8.jpg"
+ },
+ "jc2": {
+  "prefix": "themewagon_delicious",
+  "suffix": "_bg-img_insta4.jpg"
+ },
+ "tea4": {
+  "prefix": "themewagon_teahouse",
+  "suffix": "_product-3.jpg"
+ },
+ "tea5": {
+  "prefix": "themewagon_teahouse",
+  "suffix": "_product-1.jpg"
+ },
+ "tea2": {
+  "prefix": "themewagon_teahouse",
+  "suffix": "_about-3.jpg"
+ },
+ "cake6": {
+  "prefix": "themewagon_delicious",
+  "suffix": "_bg-img_bg2.jpg"
+ },
+ "roll2": {
+  "prefix": "themewagon_teahouse",
+  "suffix": "_product-2.jpg"
+ },
+ "chz": {
+  "prefix": "themewagon_pato",
+  "suffix": "_dinner-02.jpg"
+ },
+ "cake5": {
+  "prefix": "themewagon_pato",
+  "suffix": "_our-menu-20.jpg"
+ },
+ "oat1": {
+  "prefix": "restaurant-hugo__",
+  "suffix": "_slider-img-1.jpg"
+ },
+ "pk1": {
+  "prefix": "restaurant-hugo__",
+  "suffix": "_blog-img-5.jpg"
+ },
+ "cake3": {
+  "prefix": "themewagon_pato",
+  "suffix": "_our-menu-16.jpg"
+ },
+ "wf1": {
+  "prefix": "restaurant-hugo__",
+  "suffix": "_blog-img-2.jpg"
+ },
+ "des2": {
+  "prefix": "feliciano__",
+  "suffix": "_dessert-2.jpg"
+ },
+ "des1": {
+  "prefix": "feliciano__",
+  "suffix": "_dessert-1.jpg"
+ },
+ "cake4": {
+  "prefix": "themewagon_pato",
+  "suffix": "_our-menu-17.jpg"
+ },
+ "bowl5": {
+  "prefix": "themewagon_delicious",
+  "suffix": "_bg-img_r6.jpg"
+ },
+ "bowl4": {
+  "prefix": "themewagon_delicious",
+  "suffix": "_bg-img_insta5.jpg"
+ },
+ "brk6": {
+  "prefix": "feliciano__",
+  "suffix": "_breakfast-6.jpg"
+ },
+ "bowl2": {
+  "prefix": "themewagon_vegefoods",
+  "suffix": "_image_5.jpg"
+ },
+ "bowl3": {
+  "prefix": "themewagon_vegefoods",
+  "suffix": "_image_6.jpg"
+ },
+ "bowl8": {
+  "prefix": "feliciano__",
+  "suffix": "_dinner-1.jpg"
+ },
+ "bowl10": {
+  "prefix": "restaurant-hugo__",
+  "suffix": "_slider-img-3.jpg"
+ },
+ "brk3": {
+  "prefix": "feliciano__",
+  "suffix": "_breakfast-3.jpg"
+ },
+ "brk8": {
+  "prefix": "feliciano__",
+  "suffix": "_breakfast-8.jpg"
+ },
+ "bowl6": {
+  "prefix": "themewagon_delicious",
+  "suffix": "_bg-img_r5.jpg"
+ },
+ "bowl7": {
+  "prefix": "themewagon_delicious",
+  "suffix": "_bg-img_insta6.jpg"
+ },
+ "bowl9": {
+  "prefix": "feliciano__",
+  "suffix": "_dinner-3.jpg"
+ },
+ "brk4": {
+  "prefix": "feliciano__",
+  "suffix": "_breakfast-4.jpg"
+ },
+ "brk2": {
+  "prefix": "feliciano__",
+  "suffix": "_breakfast-2.jpg"
+ },
+ "brk9": {
+  "prefix": "feliciano__",
+  "suffix": "_breakfast-9.jpg"
+ },
+ "sushi4": {
+  "prefix": "themewagon_pato",
+  "suffix": "_our-menu-12.jpg"
+ },
+ "soup1": {
+  "prefix": "grilli__",
+  "suffix": "_menu-1.png"
+ },
+ "ndl6": {
+  "prefix": "themewagon_pato",
+  "suffix": "_blog-04.jpg"
+ },
+ "soup6": {
+  "prefix": "grilli__",
+  "suffix": "_menu-4.png"
+ },
+ "sea6": {
+  "prefix": "feliciano__",
+  "suffix": "_lunch-5.jpg"
+ },
+ "sea1": {
+  "prefix": "themewagon_pato",
+  "suffix": "_our-menu-01.jpg"
+ },
+ "sea4": {
+  "prefix": "themewagon_pato",
+  "suffix": "_lunch-05.jpg"
+ },
+ "sea7": {
+  "prefix": "foodie__",
+  "suffix": "_food-menu-1.png"
+ },
+ "veg2": {
+  "prefix": "themewagon_vegefoods",
+  "suffix": "_category-1.jpg"
+ },
+ "veg1": {
+  "prefix": "themewagon_vegefoods",
+  "suffix": "_bg_2.jpg"
+ },
+ "veg6": {
+  "prefix": "themewagon_vegefoods",
+  "suffix": "_product-6.jpg"
+ },
+ "veg5": {
+  "prefix": "themewagon_vegefoods",
+  "suffix": "_product-5.jpg"
+ },
+ "ndl3": {
+  "prefix": "grilli__",
+  "suffix": "_menu-2.png"
+ },
+ "grill4": {
+  "prefix": "feliciano__",
+  "suffix": "_lunch-4.jpg"
+ },
+ "grill3": {
+  "prefix": "themewagon_burgerking",
+  "suffix": "_carousel-2.jpg"
+ },
+ "saus1": {
+  "prefix": "themewagon_pato",
+  "suffix": "_our-menu-10.jpg"
+ },
+ "grill2": {
+  "prefix": "themewagon_pato",
+  "suffix": "_intro-02.jpg"
+ },
+ "grill1": {
+  "prefix": "themewagon_restoran",
+  "suffix": "_hero.png"
+ },
+ "grill6": {
+  "prefix": "foodie__",
+  "suffix": "_blog-3.jpg"
+ },
+ "stk6": {
+  "prefix": "themewagon_pato",
+  "suffix": "_lunch-02.jpg"
+ },
+ "ndl4": {
+  "prefix": "grilli__",
+  "suffix": "_hero-slider-3.jpg"
+ },
+ "sal4": {
+  "prefix": "themewagon_restoran",
+  "suffix": "_about-3.jpg"
+ },
+ "sm1": {
+  "pool": "samosa",
+  "index": 1
+ },
+ "sm2": {
+  "pool": "samosa",
+  "index": 2
+ },
+ "sm3": {
+  "pool": "samosa",
+  "index": 3
+ },
+ "sm4": {
+  "pool": "samosa",
+  "index": 4
+ },
+ "sm5": {
+  "pool": "samosa",
+  "index": 5
+ },
+ "sm6": {
+  "pool": "samosa",
+  "index": 6
+ },
+ "ds2": {
+  "pool": "dosa",
+  "index": 2
+ },
+ "ds3": {
+  "pool": "dosa",
+  "index": 3
+ },
+ "ds4": {
+  "pool": "dosa",
+  "index": 4
+ },
+ "ds5": {
+  "pool": "dosa",
+  "index": 5
+ },
+ "ds6": {
+  "pool": "dosa",
+  "index": 6
+ },
+ "ds7": {
+  "pool": "dosa",
+  "index": 7
+ },
+ "ds8": {
+  "pool": "dosa",
+  "index": 8
+ },
+ "id1": {
+  "pool": "idly",
+  "index": 1
+ },
+ "id2": {
+  "pool": "idly",
+  "index": 2
+ },
+ "id3": {
+  "pool": "idly",
+  "index": 3
+ },
+ "sm7": {
+  "pool": "samosa",
+  "index": 7
+ },
+ "sm8": {
+  "pool": "samosa",
+  "index": 8
+ },
+ "sm9": {
+  "pool": "samosa",
+  "index": 9
+ },
+ "ds9": {
+  "pool": "dosa",
+  "index": 9
+ },
+ "id4": {
+  "pool": "idly",
+  "index": 4
+ },
+ "sm10": {
+  "pool": "samosa",
+  "index": 10
+ },
+ "ds10": {
+  "pool": "dosa",
+  "index": 10
+ },
+ "id5": {
+  "pool": "idly",
+  "index": 5
+ },
+ "ds11": {
+  "pool": "dosa",
+  "index": 11
+ },
+ "id6": {
+  "pool": "idly",
+  "index": 6
+ },
+ "sm11": {
+  "pool": "samosa",
+  "index": 11
+ },
+ "ds12": {
+  "pool": "dosa",
+  "index": 12
+ },
+ "id7": {
+  "pool": "idly",
+  "index": 7
+ },
+ "sm12": {
+  "pool": "samosa",
+  "index": 12
+ },
+ "id8": {
+  "pool": "idly",
+  "index": 8
+ },
+ "ds13": {
+  "pool": "dosa",
+  "index": 13
+ },
+ "id9": {
+  "pool": "idly",
+  "index": 9
+ },
+ "ds14": {
+  "pool": "dosa",
+  "index": 14
+ },
+ "id10": {
+  "pool": "idly",
+  "index": 10
+ },
+ "ds15": {
+  "pool": "dosa",
+  "index": 15
+ },
+ "id11": {
+  "pool": "idly",
+  "index": 11
+ },
+ "id12": {
+  "pool": "idly",
+  "index": 12
+ },
+ "id13": {
+  "pool": "idly",
+  "index": 13
+ },
+ "id14": {
+  "pool": "idly",
+  "index": 14
+ },
+ "ds16": {
+  "pool": "dosa",
+  "index": 16
+ },
+ "ds17": {
+  "pool": "dosa",
+  "index": 17
+ },
+ "dmp1": {
+  "prefix": "restaurant-hugo__",
+  "suffix": "_slider-img-2.jpg"
+ },
+ "ndl5": {
+  "prefix": "themewagon_delicious",
+  "suffix": "_bg-img_insta1.jpg"
+ },
+ "rc4": {
+  "pool": "rice",
+  "index": 4
+ },
+ "coldcut": {
+  "prefix": "themewagon_restoran",
+  "suffix": "_about-4.jpg"
+ },
+ "ds18": {
+  "pool": "dosa",
+  "index": 18
+ },
+ "id15": {
+  "pool": "idly",
+  "index": 15
+ },
+ "sm13": {
+  "pool": "samosa",
+  "index": 13
+ },
+ "ds19": {
+  "pool": "dosa",
+  "index": 19
+ },
+ "id16": {
+  "pool": "idly",
+  "index": 16
+ },
+ "sm14": {
+  "pool": "samosa",
+  "index": 14
+ },
+ "ds20": {
+  "pool": "dosa",
+  "index": 20
+ },
+ "id17": {
+  "pool": "idly",
+  "index": 17
+ },
+ "ds21": {
+  "pool": "dosa",
+  "index": 21
+ },
+ "id18": {
+  "pool": "idly",
+  "index": 18
+ },
+ "ds22": {
+  "pool": "dosa",
+  "index": 22
+ },
+ "ds23": {
+  "pool": "dosa",
+  "index": 23
+ },
+ "id19": {
+  "pool": "idly",
+  "index": 19
+ },
+ "sm15": {
+  "pool": "samosa",
+  "index": 15
+ },
+ "ds24": {
+  "pool": "dosa",
+  "index": 24
+ },
+ "ds25": {
+  "pool": "dosa",
+  "index": 25
+ },
+ "id20": {
+  "pool": "idly",
+  "index": 20
+ },
+ "ds26": {
+  "pool": "dosa",
+  "index": 26
+ },
+ "ds27": {
+  "pool": "dosa",
+  "index": 27
+ },
+ "ds28": {
+  "pool": "dosa",
+  "index": 28
+ },
+ "id21": {
+  "pool": "idly",
+  "index": 21
+ },
+ "id22": {
+  "pool": "idly",
+  "index": 22
+ },
+ "id23": {
+  "pool": "idly",
+  "index": 23
+ },
+ "id24": {
+  "pool": "idly",
+  "index": 24
+ },
+ "id25": {
+  "pool": "idly",
+  "index": 25
+ },
+ "id26": {
+  "pool": "idly",
+  "index": 26
+ },
+ "id27": {
+  "pool": "idly",
+  "index": 27
+ },
+ "id28": {
+  "pool": "idly",
+  "index": 28
+ },
+ "id29": {
+  "pool": "idly",
+  "index": 29
+ },
+ "id30": {
+  "pool": "idly",
+  "index": 30
+ },
+ "id31": {
+  "pool": "idly",
+  "index": 31
+ },
+ "ds29": {
+  "pool": "dosa",
+  "index": 29
+ },
+ "id32": {
+  "pool": "idly",
+  "index": 32
+ },
+ "sm16": {
+  "pool": "samosa",
+  "index": 16
+ },
+ "ds30": {
+  "pool": "dosa",
+  "index": 30
+ },
+ "id33": {
+  "pool": "idly",
+  "index": 33
+ },
+ "sm17": {
+  "pool": "samosa",
+  "index": 17
+ },
+ "id34": {
+  "pool": "idly",
+  "index": 34
+ },
+ "ds31": {
+  "pool": "dosa",
+  "index": 31
+ },
+ "ds32": {
+  "pool": "dosa",
+  "index": 32
+ },
+ "id35": {
+  "pool": "idly",
+  "index": 35
+ },
+ "id36": {
+  "pool": "idly",
+  "index": 36
+ },
+ "id37": {
+  "pool": "idly",
+  "index": 37
+ },
+ "ds33": {
+  "pool": "dosa",
+  "index": 33
+ },
+ "id38": {
+  "pool": "idly",
+  "index": 38
+ },
+ "ds34": {
+  "pool": "dosa",
+  "index": 34
+ },
+ "id39": {
+  "pool": "idly",
+  "index": 39
+ },
+ "sm18": {
+  "pool": "samosa",
+  "index": 18
+ },
+ "ds35": {
+  "pool": "dosa",
+  "index": 35
+ },
+ "id40": {
+  "pool": "idly",
+  "index": 40
+ },
+ "ds36": {
+  "pool": "dosa",
+  "index": 36
+ },
+ "ds37": {
+  "pool": "dosa",
+  "index": 37
+ },
+ "ds38": {
+  "pool": "dosa",
+  "index": 38
+ },
+ "id41": {
+  "pool": "idly",
+  "index": 41
+ },
+ "ds39": {
+  "pool": "dosa",
+  "index": 39
+ },
+ "id42": {
+  "pool": "idly",
+  "index": 42
+ },
+ "id43": {
+  "pool": "idly",
+  "index": 43
+ },
+ "id44": {
+  "pool": "idly",
+  "index": 44
+ },
+ "ndl1": {
+  "prefix": "feliciano__",
+  "suffix": "_dinner-2.jpg"
+ },
+ "rc5": {
+  "pool": "rice",
+  "index": 5
+ },
+ "ds40": {
+  "pool": "dosa",
+  "index": 40
+ },
+ "rc6": {
+  "pool": "rice",
+  "index": 6
+ },
+ "rc7": {
+  "pool": "rice",
+  "index": 7
+ },
+ "rc8": {
+  "pool": "rice",
+  "index": 8
+ },
+ "rc9": {
+  "pool": "rice",
+  "index": 9
+ },
+ "rc10": {
+  "pool": "rice",
+  "index": 10
+ },
+ "rc11": {
+  "pool": "rice",
+  "index": 11
+ },
+ "rc12": {
+  "pool": "rice",
+  "index": 12
+ },
+ "rc13": {
+  "pool": "rice",
+  "index": 13
+ },
+ "rc14": {
+  "pool": "rice",
+  "index": 14
+ },
+ "rc15": {
+  "pool": "rice",
+  "index": 15
+ },
+ "rc16": {
+  "pool": "rice",
+  "index": 16
+ },
+ "rc17": {
+  "pool": "rice",
+  "index": 17
+ },
+ "ndl2": {
+  "prefix": "feliciano__",
+  "suffix": "_breakfast-1.jpg"
+ },
+ "rc18": {
+  "pool": "rice",
+  "index": 18
+ },
+ "rc19": {
+  "pool": "rice",
+  "index": 19
+ },
+ "rc20": {
+  "pool": "rice",
+  "index": 20
+ },
+ "rc21": {
+  "pool": "rice",
+  "index": 21
+ },
+ "rc22": {
+  "pool": "rice",
+  "index": 22
+ },
+ "rc23": {
+  "pool": "rice",
+  "index": 23
+ },
+ "rc24": {
+  "pool": "rice",
+  "index": 24
+ },
+ "rc25": {
+  "pool": "rice",
+  "index": 25
+ },
+ "rc26": {
+  "pool": "rice",
+  "index": 26
+ },
+ "rc27": {
+  "pool": "rice",
+  "index": 27
+ },
+ "rc28": {
+  "pool": "rice",
+  "index": 28
+ },
+ "rc29": {
+  "pool": "rice",
+  "index": 29
+ },
+ "bc1": {
+  "pool": "butter-chicken",
+  "index": 1
+ },
+ "bc2": {
+  "pool": "butter-chicken",
+  "index": 2
+ },
+ "bc3": {
+  "pool": "butter-chicken",
+  "index": 3
+ },
+ "bc4": {
+  "pool": "butter-chicken",
+  "index": 4
+ },
+ "br1": {
+  "pool": "biryani",
+  "index": 1
+ },
+ "rc30": {
+  "pool": "rice",
+  "index": 30
+ },
+ "rc31": {
+  "pool": "rice",
+  "index": 31
+ },
+ "rc32": {
+  "pool": "rice",
+  "index": 32
+ },
+ "rc33": {
+  "pool": "rice",
+  "index": 33
+ },
+ "coldcut2": {
+  "prefix": "themewagon_restoran",
+  "suffix": "_about-3.jpg"
+ },
+ "rc34": {
+  "pool": "rice",
+  "index": 34
+ },
+ "br2": {
+  "pool": "biryani",
+  "index": 2
+ },
+ "rc35": {
+  "pool": "rice",
+  "index": 35
+ },
+ "br3": {
+  "pool": "biryani",
+  "index": 3
+ },
+ "br4": {
+  "pool": "biryani",
+  "index": 4
+ },
+ "br5": {
+  "pool": "biryani",
+  "index": 5
+ },
+ "br6": {
+  "pool": "biryani",
+  "index": 6
+ },
+ "br7": {
+  "pool": "biryani",
+  "index": 7
+ },
+ "br8": {
+  "pool": "biryani",
+  "index": 8
+ },
+ "br9": {
+  "pool": "biryani",
+  "index": 9
+ },
+ "br10": {
+  "pool": "biryani",
+  "index": 10
+ },
+ "bc5": {
+  "pool": "butter-chicken",
+  "index": 5
+ },
+ "br11": {
+  "pool": "biryani",
+  "index": 11
+ },
+ "br12": {
+  "pool": "biryani",
+  "index": 12
+ },
+ "br13": {
+  "pool": "biryani",
+  "index": 13
+ },
+ "br14": {
+  "pool": "biryani",
+  "index": 14
+ },
+ "br15": {
+  "pool": "biryani",
+  "index": 15
+ },
+ "br16": {
+  "pool": "biryani",
+  "index": 16
+ },
+ "br17": {
+  "pool": "biryani",
+  "index": 17
+ },
+ "br18": {
+  "pool": "biryani",
+  "index": 18
+ },
+ "br19": {
+  "pool": "biryani",
+  "index": 19
+ },
+ "br20": {
+  "pool": "biryani",
+  "index": 20
+ },
+ "br21": {
+  "pool": "biryani",
+  "index": 21
+ },
+ "br22": {
+  "pool": "biryani",
+  "index": 22
+ },
+ "br23": {
+  "pool": "biryani",
+  "index": 23
+ },
+ "br24": {
+  "pool": "biryani",
+  "index": 24
+ },
+ "bc6": {
+  "pool": "butter-chicken",
+  "index": 6
+ },
+ "bc7": {
+  "pool": "butter-chicken",
+  "index": 7
+ },
+ "bc8": {
+  "pool": "butter-chicken",
+  "index": 8
+ },
+ "ds41": {
+  "pool": "dosa",
+  "index": 41
+ },
+ "br25": {
+  "pool": "biryani",
+  "index": 25
+ },
+ "br26": {
+  "pool": "biryani",
+  "index": 26
+ },
+ "br27": {
+  "pool": "biryani",
+  "index": 27
+ },
+ "br28": {
+  "pool": "biryani",
+  "index": 28
+ },
+ "br29": {
+  "pool": "biryani",
+  "index": 29
+ },
+ "br30": {
+  "pool": "biryani",
+  "index": 30
+ },
+ "br31": {
+  "pool": "biryani",
+  "index": 31
+ },
+ "br32": {
+  "pool": "biryani",
+  "index": 32
+ },
+ "br33": {
+  "pool": "biryani",
+  "index": 33
+ },
+ "br34": {
+  "pool": "biryani",
+  "index": 34
+ },
+ "br35": {
+  "pool": "biryani",
+  "index": 35
+ },
+ "bc9": {
+  "pool": "butter-chicken",
+  "index": 9
+ },
+ "bc10": {
+  "pool": "butter-chicken",
+  "index": 10
+ },
+ "bc11": {
+  "pool": "butter-chicken",
+  "index": 11
+ },
+ "bc12": {
+  "pool": "butter-chicken",
+  "index": 12
+ },
+ "br36": {
+  "pool": "biryani",
+  "index": 36
+ },
+ "br37": {
+  "pool": "biryani",
+  "index": 37
+ },
+ "ds42": {
+  "pool": "dosa",
+  "index": 42
+ },
+ "ds43": {
+  "pool": "dosa",
+  "index": 43
+ },
+ "ds44": {
+  "pool": "dosa",
+  "index": 44
+ },
+ "ds45": {
+  "pool": "dosa",
+  "index": 45
+ },
+ "sm19": {
+  "pool": "samosa",
+  "index": 19
+ },
+ "br38": {
+  "pool": "biryani",
+  "index": 38
+ },
+ "br39": {
+  "pool": "biryani",
+  "index": 39
+ },
+ "br40": {
+  "pool": "biryani",
+  "index": 40
+ },
+ "br41": {
+  "pool": "biryani",
+  "index": 41
+ },
+ "br42": {
+  "pool": "biryani",
+  "index": 42
+ },
+ "br43": {
+  "pool": "biryani",
+  "index": 43
+ },
+ "br44": {
+  "pool": "biryani",
+  "index": 44
+ },
+ "br45": {
+  "pool": "biryani",
+  "index": 45
+ },
+ "br46": {
+  "pool": "biryani",
+  "index": 46
+ },
+ "br47": {
+  "pool": "biryani",
+  "index": 47
+ },
+ "bc13": {
+  "pool": "butter-chicken",
+  "index": 13
+ },
+ "stk1": {
+  "prefix": "themewagon_pato",
+  "suffix": "_our-menu-02.jpg"
+ },
+ "stk2": {
+  "prefix": "foodie__",
+  "suffix": "_food-menu-5.png"
+ },
+ "stk3": {
+  "prefix": "themewagon_pato",
+  "suffix": "_lunch-04.jpg"
+ },
+ "stk4": {
+  "prefix": "restaurant-hugo__",
+  "suffix": "_blog-img-3.jpg"
+ },
+ "stk5": {
+  "prefix": "foodie__",
+  "suffix": "_food-menu-2.png"
+ },
+ "stk7": {
+  "prefix": "feliciano__",
+  "suffix": "_lunch-6.jpg"
+ },
+ "stk8": {
+  "prefix": "grilli__",
+  "suffix": "_menu-5.png"
+ },
+ "sushi1": {
+  "prefix": "foodie__",
+  "suffix": "_food-menu-4.png"
+ },
+ "sushi2": {
+  "prefix": "grilli__",
+  "suffix": "_hero-slider-2.jpg"
+ },
+ "sushi3": {
+  "prefix": "themewagon_pato",
+  "suffix": "_our-menu-09.jpg"
+ },
+ "sea8": {
+  "prefix": "feliciano__",
+  "suffix": "_lunch-1.jpg"
+ },
+ "sea9": {
+  "prefix": "feliciano__",
+  "suffix": "_breakfast-7.jpg"
+ },
+ "sea5": {
+  "prefix": "feliciano__",
+  "suffix": "_lunch-8.jpg"
+ },
+ "sea2": {
+  "prefix": "themewagon_pato",
+  "suffix": "_blog-14.jpg"
+ },
+ "sea3": {
+  "prefix": "themewagon_pato",
+  "suffix": "_our-menu-06.jpg"
+ },
+ "ricebowl1": {
+  "prefix": "grilli__",
+  "suffix": "_menu-6.png"
+ },
+ "frt1": {
+  "prefix": "themewagon_fruitkha",
+  "suffix": "_news-bg-2.jpg"
+ },
+ "frt2": {
+  "prefix": "themewagon_fruitkha",
+  "suffix": "_news-bg-1.jpg"
+ },
+ "frt3": {
+  "prefix": "themewagon_fruitkha",
+  "suffix": "_news-bg-6.jpg"
+ },
+ "frt4": {
+  "prefix": "themewagon_fruitkha",
+  "suffix": "_product-img-2.jpg"
+ },
+ "frt5": {
+  "prefix": "themewagon_fruitkha",
+  "suffix": "_product-img-3.jpg"
+ },
+ "frt6": {
+  "prefix": "themewagon_fruitkha",
+  "suffix": "_product-img-5.jpg"
+ },
+ "frt7": {
+  "prefix": "themewagon_fruitkha",
+  "suffix": "_product-img-4.jpg"
+ },
+ "frt8": {
+  "prefix": "themewagon_fruitkha",
+  "suffix": "_product-img-6.jpg"
+ },
+ "frt9": {
+  "prefix": "themewagon_fruitkha",
+  "suffix": "_news-bg-3.jpg"
+ },
+ "frt10": {
+  "prefix": "themewagon_fruitkha",
+  "suffix": "_news-bg-4.jpg"
+ },
+ "shop_s01": {
+  "prefix": "themewagon_burgerking",
+  "suffix": "_carousel-1.jpg"
+ },
+ "shop_s02": {
+  "prefix": "foodie__",
+  "suffix": "_food-menu-3.png"
+ },
+ "shop_s03": {
+  "prefix": "themewagon_burgerking",
+  "suffix": "_menu-burger-img.jpg"
+ },
+ "shop_s04": {
+  "prefix": "themewagon_burgerking",
+  "suffix": "_feature-1.jpg"
+ },
+ "shop_s05": {
+  "prefix": "feliciano__",
+  "suffix": "_lunch-3.jpg"
+ },
+ "shop_s06": {
+  "pool": "burger",
+  "index": 85
+ },
+ "shop_s07": {
+  "prefix": "foodie__",
+  "suffix": "_banner-4.jpg"
+ },
+ "shop_s08": {
+  "pool": "pizza",
+  "index": 41
+ },
+ "shop_s09": {
+  "pool": "pasta",
+  "index": 1
+ },
+ "shop_s10": {
+  "pool": "pasta",
+  "index": 18
+ },
+ "shop_s11": {
+  "prefix": "themewagon_koppee",
+  "suffix": "_menu-2.jpg"
+ },
+ "shop_s12": {
+  "prefix": "themewagon_koppee",
+  "suffix": "_menu-1.jpg"
+ },
+ "shop_s13": {
+  "prefix": "themewagon_koppee",
+  "suffix": "_menu-3.jpg"
+ },
+ "shop_s14": {
+  "prefix": "feliciano__",
+  "suffix": "_drink-2.jpg"
+ },
+ "shop_s15": {
+  "prefix": "themewagon_delicious",
+  "suffix": "_bg-img_insta4.jpg"
+ },
+ "shop_s16": {
+  "prefix": "feliciano__",
+  "suffix": "_drink-3.jpg"
+ },
+ "shop_s17": {
+  "prefix": "themewagon_teahouse",
+  "suffix": "_product-3.jpg"
+ },
+ "shop_s18": {
+  "prefix": "themewagon_teahouse",
+  "suffix": "_product-4.jpg"
+ },
+ "shop_s19": {
+  "prefix": "themewagon_pato",
+  "suffix": "_our-menu-19.jpg"
+ },
+ "shop_s20": {
+  "prefix": "feliciano__",
+  "suffix": "_dessert-2.jpg"
+ },
+ "shop_s21": {
+  "prefix": "feliciano__",
+  "suffix": "_dessert-5.jpg"
+ },
+ "shop_s22": {
+  "prefix": "themewagon_vegefoods",
+  "suffix": "_image_5.jpg"
+ },
+ "shop_s23": {
+  "prefix": "feliciano__",
+  "suffix": "_dinner-3.jpg"
+ },
+ "shop_s24": {
+  "prefix": "feliciano__",
+  "suffix": "_lunch-5.jpg"
+ },
+ "shop_s25": {
+  "prefix": "themewagon_delicious",
+  "suffix": "_bg-img_r4.jpg"
+ },
+ "shop_s26": {
+  "prefix": "themewagon_restoran",
+  "suffix": "_hero.png"
+ },
+ "shop_s27": {
+  "prefix": "feliciano__",
+  "suffix": "_lunch-4.jpg"
+ },
+ "shop_s28": {
+  "pool": "dosa",
+  "index": 17
+ },
+ "shop_s29": {
+  "prefix": "restaurant-hugo__",
+  "suffix": "_slider-img-2.jpg"
+ },
+ "shop_s30": {
+  "pool": "idly",
+  "index": 44
+ },
+ "shop_s31": {
+  "prefix": "feliciano__",
+  "suffix": "_dinner-2.jpg"
+ },
+ "shop_s32": {
+  "prefix": "feliciano__",
+  "suffix": "_breakfast-1.jpg"
+ },
+ "shop_s33": {
+  "pool": "butter-chicken",
+  "index": 5
+ },
+ "shop_s34": {
+  "pool": "rice",
+  "index": 32
+ },
+ "shop_s35": {
+  "pool": "biryani",
+  "index": 35
+ },
+ "shop_s36": {
+  "pool": "butter-chicken",
+  "index": 13
+ },
+ "shop_s37": {
+  "prefix": "themewagon_pato",
+  "suffix": "_our-menu-02.jpg"
+ },
+ "shop_s38": {
+  "prefix": "foodie__",
+  "suffix": "_food-menu-4.png"
+ },
+ "shop_s39": {
+  "prefix": "feliciano__",
+  "suffix": "_lunch-8.jpg"
+ },
+ "shop_s40": {
+  "prefix": "themewagon_fruitkha",
+  "suffix": "_news-bg-2.jpg"
+ }
+}

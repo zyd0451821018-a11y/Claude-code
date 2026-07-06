@@ -250,6 +250,7 @@ var CT_STATE = (function () {
       items: sum.group.items.map(function (it) {
         return {
           pid: it.product.id, name: it.product.name, img: it.product.img,
+          photo: it.product.photo,
           price: it.product.price, origPrice: it.product.origPrice, qty: it.qty
         };
       }),

@@ -82,6 +82,15 @@ const motifs = {
     P('M 84 156 Q 84 236 160 240 Q 236 236 236 156 Z', W) +
     E(160, 150, 62, 26, W) + E(160, 138, 44, 18, W) +
     G(R(190, 60, 9, 90, 4, W) + R(208, 66, 9, 90, 4, W), 'transform="rotate(28 200 100)"') }),
+  coffee: () => ({ body:
+    P('M 100 120 Q 98 216 160 220 Q 222 216 220 120 Z', W) +
+    P('M 218 136 q 36 0 32 30 q -4 28 -36 22', 'none', `stroke="${W}" stroke-width="12"`) +
+    E(160, 120, 60, 14, 'rgba(255,255,255,0.7)') +
+    P('M 138 74 q 8 12 0 24 M 166 68 q 8 12 0 24', 'none', `stroke="${W}" stroke-width="7" stroke-linecap="round"`) }),
+  apple: () => ({ body:
+    P('M 160 120 Q 100 104 92 168 Q 86 224 132 240 Q 152 248 160 238 Q 168 248 188 240 Q 234 224 228 168 Q 220 104 160 120 Z', W) +
+    P('M 160 118 q -4 -26 12 -38', 'none', `stroke="${W}" stroke-width="9" stroke-linecap="round"`) +
+    P('M 172 84 q 30 -12 34 16 q -24 12 -34 -16 Z', 'rgba(120,190,90,0.95)') }),
   cloche: () => ({ body:
     P('M 84 208 Q 84 128 160 124 Q 236 128 236 208 Z', W) +
     C(160, 108, 12, W) +
@@ -104,6 +113,7 @@ const cats = {
   all:       () => catIcon('#F5A623', '#E8830C', motifs.cutlery(), 0.74),
   burger:    () => catIcon('#F2994A', '#E0691E', motifs.burger(), 0.8),
   pizza:     () => catIcon('#D9822B', '#B65E12', motifs.pizza(), 0.8),
+  coffee:    () => catIcon('#7A5230', '#54321A', motifs.coffee(), 0.8),
   drink:     () => catIcon('#E8B93C', '#C99414', motifs.teacup(), 0.8),
   dessert:   () => catIcon('#E4708C', '#C24460', motifs.cake(), 0.8),
   brunch:    () => catIcon('#5BA85C', '#3A7E3C', motifs.leaf(), 0.78),
@@ -112,7 +122,8 @@ const cats = {
   breakfast: () => catIcon('#F2B03C', '#D88E14', motifs.dumpling(), 0.8),
   noodle:    () => catIcon('#4A88C7', '#2C61A0', motifs.noodle(), 0.8),
   rice:      () => catIcon('#7A9E3C', '#567A1E', motifs.rice(), 0.78),
-  western:   () => catIcon('#4A4644', '#26221F', motifs.cloche(), 0.8)
+  western:   () => catIcon('#4A4644', '#26221F', motifs.cloche(), 0.8),
+  fruit:     () => catIcon('#E05A48', '#B83424', motifs.apple(), 0.8)
 };
 
 async function main() {

@@ -137,14 +137,14 @@ var CT_VIEWS = (function () {
     }).join('') + '</div>';
 
     /* 限时秒杀 */
-    var seckills = DATA.seckillProducts();
+    var seckills = DATA.seckillProducts().slice(0, 12);
     html += '<section class="seckill">' +
       '<div class="seckill-head"><span class="seckill-title">🔥 限时秒杀</span>' +
       '<span class="seckill-timer">距结束 <b id="seckill-countdown">' + fmtCountdown(S.seckillLeftMs()) + '</b></span></div>' +
       '<div class="seckill-scroll">' + seckills.map(function (e) {
         var p = e.product;
         return '<div class="seckill-card" data-action="nav" data-to="#/product/' + p.id + '">' +
-          '<div class="seckill-img">' + pimg(p.id, p.name) + '</div>' +
+          '<div class="seckill-img">' + pimg(p.photo || p.id, p.name) + '</div>' +
           '<div class="seckill-name">' + esc(p.name) + '</div>' +
           '<div class="seckill-price"><span class="price"><i>¥</i>' + S.yuan(p.price) + '</span>' +
           '<span class="orig-price">¥' + S.yuan(p.origPrice) + '</span></div>' +
@@ -180,7 +180,7 @@ var CT_VIEWS = (function () {
       '<span class="meta-item">配送¥' + S.yuan(s.deliveryFee) + '</span></div>' +
       '<div class="shop-promos">' + tagChips(s.promos) + '</div>' +
       '<div class="shop-recs">' + recs.map(function (p) {
-        return '<div class="rec-item"><span class="rec-img">' + pimg(p.id, p.name) + '</span>' +
+        return '<div class="rec-item"><span class="rec-img">' + pimg(p.photo || p.id, p.name) + '</span>' +
           '<span class="rec-name">' + esc(p.name) + '</span>' +
           '<span class="rec-price">¥' + S.yuan(p.price) + '</span></div>';
       }).join('') + '</div>' +
@@ -230,7 +230,7 @@ var CT_VIEWS = (function () {
   /* 通用商品行（搜索结果 / 店铺菜单共用） */
   function productRow(p, shop, showShop) {
     return '<div class="product-row">' +
-      '<div class="prod-img" data-action="nav" data-to="#/product/' + p.id + '">' + pimg(p.id, p.name) + '</div>' +
+      '<div class="prod-img" data-action="nav" data-to="#/product/' + p.id + '">' + pimg(p.photo || p.id, p.name) + '</div>' +
       '<div class="prod-main">' +
       '<div class="prod-name" data-action="nav" data-to="#/product/' + p.id + '">' + esc(p.name) + '</div>' +
       '<div class="prod-desc">' + esc(p.desc) + '</div>' +
@@ -317,7 +317,7 @@ var CT_VIEWS = (function () {
 
     var html = '<div class="page page-product">';
     html += navbar('商品详情');
-    html += '<div class="prod-hero">' + pimg(p.id, p.name) + '</div>';
+    html += '<div class="prod-hero">' + pimg(p.photo || p.id, p.name) + '</div>';
     html += '<div class="card prod-detail-card">' +
       '<div class="pd-price-row">' + priceBlock(p) +
       '<span class="pd-sales">月售' + p.sales + '</span></div>' +
@@ -373,7 +373,7 @@ var CT_VIEWS = (function () {
           g.items.map(function (it) {
             var p = it.product;
             return '<div class="cart-item">' +
-              '<div class="ci-img" data-action="nav" data-to="#/product/' + p.id + '">' + pimg(p.id, p.name) + '</div>' +
+              '<div class="ci-img" data-action="nav" data-to="#/product/' + p.id + '">' + pimg(p.photo || p.id, p.name) + '</div>' +
               '<div class="ci-main"><div class="ci-name">' + esc(p.name) + '</div>' +
               '<div class="ci-price">' + priceBlock(p) + '</div></div>' +
               '<div class="ci-right">' + stepper(p.id) +
@@ -425,7 +425,7 @@ var CT_VIEWS = (function () {
     html += '<div class="card"><div class="co-shop"><span class="cg-logo">' + simg(s.id, s.name) + '</span>' + esc(s.name) + '</div>' +
       sum.group.items.map(function (it) {
         var p = it.product;
-        return '<div class="co-item"><span class="co-img">' + pimg(p.id, p.name) + '</span>' +
+        return '<div class="co-item"><span class="co-img">' + pimg(p.photo || p.id, p.name) + '</span>' +
           '<span class="co-name">' + esc(p.name) + '</span>' +
           '<span class="co-qty">x' + it.qty + '</span>' +
           '<span class="co-price">' + money(p.price * it.qty) + '</span></div>';
@@ -540,7 +540,7 @@ var CT_VIEWS = (function () {
     html += '<div class="card"><div class="co-shop" data-action="nav" data-to="#/shop/' + o.shopId + '">' +
       '<span class="cg-logo">' + simg(o.shopId, o.shopName) + '</span>' + esc(o.shopName) + ' ›</div>' +
       o.items.map(function (it) {
-        return '<div class="co-item"><span class="co-img">' + pimg(it.pid, it.name) + '</span>' +
+        return '<div class="co-item"><span class="co-img">' + pimg(it.photo || it.pid, it.name) + '</span>' +
           '<span class="co-name">' + esc(it.name) + '</span>' +
           '<span class="co-qty">x' + it.qty + '</span>' +
           '<span class="co-price">' + money(it.price * it.qty) + '</span></div>';
@@ -670,7 +670,7 @@ var CT_VIEWS = (function () {
       html += entries.map(function (e) {
         var p = e.product, s = e.shop;
         return '<div class="card fav-row">' +
-          '<div class="prod-img" data-action="nav" data-to="#/product/' + p.id + '">' + pimg(p.id, p.name) + '</div>' +
+          '<div class="prod-img" data-action="nav" data-to="#/product/' + p.id + '">' + pimg(p.photo || p.id, p.name) + '</div>' +
           '<div class="prod-main"><div class="prod-name" data-action="nav" data-to="#/product/' + p.id + '">' + esc(p.name) + '</div>' +
           '<div class="prod-meta"><span class="meta-item shop-link" data-action="nav" data-to="#/shop/' + s.id + '">' + esc(s.name) + ' ›</span></div>' +
           '<div class="prod-bottom">' + priceBlock(p) + stepper(p.id) + '</div></div>' +
@@ -754,7 +754,7 @@ var CT_VIEWS = (function () {
         '<div class="ic-text">有 <b>' + r.resisted.length + '</b> 件商品被你收藏后一直没有下单，约 <b>' +
         money(r.resistedAmount) + '</b>。想要但没买，也是一种选择。</div>' +
         '<div class="resist-list">' + r.resisted.slice(0, 6).map(function (e) {
-          return '<div class="resist-item"><span class="ri-img">' + pimg(e.product.id, e.product.name) + '</span>' +
+          return '<div class="resist-item"><span class="ri-img">' + pimg(e.product.photo || e.product.id, e.product.name) + '</span>' +
             '<span class="ri-name">' + esc(e.product.name) + '</span>' +
             '<span class="ri-price">' + money(e.product.price) + '</span></div>';
         }).join('') + '</div></div>';
