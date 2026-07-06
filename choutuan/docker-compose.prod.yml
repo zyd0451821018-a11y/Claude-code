@@ -1,0 +1,16 @@
+# ============================================================
+# 丑团 · 生产 compose —— 端口 9000（映射容器内 80）
+# 服务器路径：/opt/choutuan/docker-compose.prod.yml
+# 用法：sudo docker compose -f docker-compose.prod.yml up -d --no-deps web
+# ============================================================
+name: choutuan
+
+services:
+  web:
+    image: choutuan-web:latest
+    container_name: choutuan-web-1
+    ports:
+      - "9000:80"
+    restart: unless-stopped
+    # 纯静态站：无 volume、无 env。用户数据全在访问者浏览器 localStorage，
+    # 服务端零状态，换镜像不涉及任何数据迁移。

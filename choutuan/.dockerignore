@@ -1,0 +1,11 @@
+node_modules
+test
+tools
+docs
+deploy/deploy-*.sh
+deploy/README.md
+package.json
+package-lock.json
+README.md
+.gitignore
+*.md
