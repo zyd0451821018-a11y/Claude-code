@@ -86,23 +86,23 @@ async function main() {
     $$(win, '.shop-logo img.ph').length === 16);
 
   // M3 分类筛选
-  click(win, $$(win, '.cat-item').find(el => el.dataset.cat === 'milktea'));
+  click(win, $$(win, '.cat-item').find(el => el.dataset.cat === 'burger'));
   await sleep(10);
-  check('M3', '分类筛选「奶茶饮品」后只剩 3 家店铺', $$(win, '.shop-card').length === 3);
+  check('M3', '分类筛选「汉堡炸鸡」后只剩 3 家店铺', $$(win, '.shop-card').length === 3);
   click(win, $$(win, '.cat-item').find(el => el.dataset.cat === 'all'));
   await sleep(10);
 
   // M4 进店
   await nav(win, '#/shop/s04');
-  check('M4', '店铺页渲染店招/公告/菜单（喜茶茶）',
-    text(win, '.hero-name') === '喜茶茶' && appHTML(win).includes('公告') && $$(win, '.product-row').length === 4);
+  check('M4', '店铺页渲染店招/公告/菜单（必胜胜客）',
+    text(win, '.hero-name') === '必胜胜客' && appHTML(win).includes('公告') && $$(win, '.product-row').length === 4);
 
   // M5 加购 → 结算条更新
   const plusOf = pid => $$(win, `.step-btn.plus[data-pid="${pid}"]`)[0];
-  click(win, plusOf('p0401')); await sleep(10); // 多肉葡萄萄 19 元
+  click(win, plusOf('p0401')); await sleep(10); // 玛格丽特披萨 19 元
   check('M5', '加购后结算条显示小计 ¥19.00', text(win, '.bar-price').includes('19.00'));
 
-  // M6 起送门槛（喜茶茶起送 ¥15，已达）→ 去结算按钮激活
+  // M6 起送门槛（必胜胜客起送 ¥15，已达）→ 去结算按钮激活
   check('M6', '达到起送价后按钮变为「去结算」', text(win, '.bar-btn') === '去结算');
 
   // M7 步进器增减
@@ -122,14 +122,14 @@ async function main() {
 
   // M10 搜索有结果
   await nav(win, '#/search');
-  $(win, '#search-input').value = '奶茶';
+  $(win, '#search-input').value = '披萨';
   click(win, $(win, '.search-go')); await sleep(10);
-  check('M10', '搜索「奶茶」返回相关商品', $$(win, '.product-row').length > 0);
+  check('M10', '搜索「披萨」返回相关商品', $$(win, '.product-row').length > 0);
 
   // M11 搜索历史（走真实入口：首页搜索框）
   await nav(win, '#/home');
   click(win, $(win, '.search-entry')); await sleep(30);
-  check('M11', '搜索历史记录「奶茶」', $$(win, '.chip').some(c => c.textContent === '奶茶'));
+  check('M11', '搜索历史记录「披萨」', $$(win, '.chip').some(c => c.textContent === '披萨'));
 
   // M12 跨店分组：再加一家店的商品
   S.addToCart('p0501', 3); // 蜜雪 柠檬水 4 元 ×3 = 12（起送10）

@@ -51,10 +51,20 @@ js/data.js          数据层：16 家店铺 / 64 款商品 / 评价语料
 js/state.js         状态层：购物车 / 订单 / 收藏 / 周报统计（localStorage 持久化）
 js/views.js         渲染层：纯函数，返回 HTML 字符串
 js/app.js           控制层：hash 路由 / 事件委托 / 定时刷新
+img/                真实产品照片（64 商品 + 16 店招）+ 分类图标
+tools/              照片素材拉取 / 裁切处理 / 分类图标生成脚本
 ```
 
 - 数据存浏览器 `localStorage`，刷新不丢；换浏览器或清缓存即重置。
-- 门店均为现实品牌的搞笑化名（麦当当、啃德鸡、喜茶茶、海底捞捞……），纯属虚构。
+- 门店均为现实品牌的搞笑化名（麦当当、啃德鸡、必胜胜客、海底捞捞……），纯属虚构。
+- **商品图与店招均为真实食物照片**，取自以下开源模板/图库仓库
+  （经 Go module proxy 拉取，来源与许可见 `tools/fetch-photos.sh`）：
+  [Foodish](https://github.com/surhud004/Foodish)（MIT）、
+  codewithsadee 的 [grilli](https://github.com/codewithsadee/grilli) / [foodie](https://github.com/codewithsadee/foodie)（MIT）、
+  themewagon 的 feane / feliciano（CC BY 3.0）、
+  gethugothemes 的 restaurant-hugo（MIT）。
+  复现流程：`tools/fetch-photos.sh` 拉素材 → `tools/prepare-photos.js` 按
+  `tools/photo-map.json` 裁切出 `img/*.webp`。
 - 演示加速：配送每 15 秒推进一阶段（`js/state.js` 中的 `STEP_MS`），约 1 分钟走完全程。
 
 ## 测试
