@@ -1,0 +1,12 @@
+{
+  "name": "choutuan",
+  "version": "1.0.0",
+  "description": "丑团 —— 伪装成购物 App 的情绪化消费觉察工具（纯静态，零构建）",
+  "private": true,
+  "scripts": {
+    "test": "node test/e2e.test.js"
+  },
+  "devDependencies": {
+    "jsdom": "^24.0.0"
+  }
+}
