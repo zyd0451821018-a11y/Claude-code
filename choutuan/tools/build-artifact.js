@@ -25,8 +25,8 @@ async function main() {
   for (let i = 0; i < files.length; i += CHUNK) {
     await Promise.all(files.slice(i, i + CHUNK).map(async f => {
       const buf = await sharp(path.join(imgDir, f))
-        .resize(176, 176, { fit: 'cover' })
-        .webp({ quality: 52 })
+        .resize(144, 144, { fit: 'cover' })
+        .webp({ quality: 46 })
         .toBuffer();
       imgMap[f.replace('.webp', '')] = 'data:image/webp;base64,' + buf.toString('base64');
     }));
