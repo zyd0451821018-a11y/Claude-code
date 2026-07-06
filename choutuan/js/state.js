@@ -101,6 +101,8 @@ var CT_STATE = (function () {
 
   function addToCart(pid, delta) {
     delta = delta === undefined ? 1 : delta;
+    var prod = DATA.getProduct(pid);
+    if (delta > 0 && prod && prod.soldout) return; // 售罄不可加购
     var item = null;
     for (var i = 0; i < state.cart.length; i++) {
       if (state.cart[i].pid === pid) { item = state.cart[i]; break; }

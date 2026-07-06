@@ -59,6 +59,8 @@ var CT_VIEWS = (function () {
 
   /* 商品行内步进器：qty=0 只显示 +，>0 显示 - qty + */
   function stepper(pid) {
+    var prod = DATA.getProduct(pid);
+    if (prod && prod.soldout) return '<span class="soldout-tag">已售罄</span>';
     var qty = S.cartQty(pid);
     var minus = qty > 0
       ? '<button class="step-btn minus" data-action="cart-minus" data-pid="' + pid + '" aria-label="减少">−</button><span class="step-qty">' + qty + '</span>'

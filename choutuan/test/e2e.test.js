@@ -316,6 +316,24 @@ async function main() {
   check('B8', '刷新恢复购物车/订单/收藏；清除缓存后全部重置', restored && wiped);
   fresh.dom.window.close();
 
+  // B9 后台覆盖项：改名改价售罄即时生效，售罄不可加购
+  const ovrTarget = D.SHOPS[0].products.find(p => !S.cartQty(p.id));
+  const applied = D.applyOverrides([
+    { pid: ovrTarget.id, name: '后台改名测试款', price: 1.1, origPrice: 9.9, soldout: false },
+    { pid: 'p_not_exist', price: 5 }
+  ]);
+  const beforeQty = S.cartQty(ovrTarget.id);
+  D.applyOverrides([{ pid: ovrTarget.id, soldout: true }]);
+  S.addToCart(ovrTarget.id, 1); // 售罄应被拒绝
+  check('B9', '后台覆盖项生效（改名/改价），售罄商品不可加购',
+    applied === 1 && ovrTarget.name === '后台改名测试款' && ovrTarget.price === 1.1 &&
+    S.cartQty(ovrTarget.id) === beforeQty);
+  await nav(win, '#/shop/' + D.SHOPS[0].id);
+  check('B9a', '售罄商品渲染「已售罄」且无加购按钮',
+    appHTML(win).includes('已售罄') &&
+    !$$(win, `.step-btn.plus[data-pid="${ovrTarget.id}"]`).length);
+  D.applyOverrides([{ pid: ovrTarget.id, soldout: false }]);
+
   /* ================= 真实入口烟雾测试 ================= */
   console.log('\n[真实入口]');
   const realDom = await JSDOM.fromFile(path.join(ROOT, 'index.html'), {

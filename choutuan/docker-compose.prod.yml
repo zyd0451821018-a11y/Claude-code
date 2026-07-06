@@ -1,16 +1,21 @@
 # ============================================================
-# 丑团 · 生产 compose —— 端口 9000（映射容器内 80）
-# 服务器路径：/opt/choutuan/docker-compose.prod.yml
+# 丑团 · 生产 compose —— 端口 9000（映射容器内 8800）
+# 服务器路径：/opt/choutuan/docker-compose.prod.yml（同目录放 .env）
 # 用法：sudo docker compose -f docker-compose.prod.yml up -d --no-deps web
 # ============================================================
 name: choutuan
 
 services:
   web:
-    image: choutuan-web:latest
+    image: choutuan-api:latest
     container_name: choutuan-web-1
     ports:
-      - "9000:80"
+      - "9000:8800"
+    env_file:
+      - .env            # ADMIN_PASSWORD=管理后台密码（务必修改默认值）
+    volumes:
+      - choutuan_db:/app/db   # SQLite：商品覆盖项 + 埋点统计，换镜像不丢
     restart: unless-stopped
-    # 纯静态站：无 volume、无 env。用户数据全在访问者浏览器 localStorage，
-    # 服务端零状态，换镜像不涉及任何数据迁移。
+
+volumes:
+  choutuan_db:

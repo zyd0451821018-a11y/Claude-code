@@ -18320,8 +18320,24 @@ var CT_DATA = (function () {
     return RIDERS[seed % RIDERS.length];
   }
 
+  /* 后台覆盖项：改名/改价/售罄（后台不可达时前端用内置数据，零依赖可用） */
+  function applyOverrides(list) {
+    var n = 0;
+    (list || []).forEach(function (o) {
+      var p = getProduct(o.pid);
+      if (!p) return;
+      if (o.name) p.name = o.name;
+      if (o.price != null) p.price = o.price;
+      if (o.origPrice != null) p.origPrice = o.origPrice;
+      p.soldout = !!o.soldout;
+      n++;
+    });
+    return n;
+  }
+
   return {
     CATEGORIES: CATEGORIES,
+    applyOverrides: applyOverrides,
     SHOPS: SHOPS,
     DEFAULT_ADDRESSES: DEFAULT_ADDRESSES,
     HOT_WORDS: HOT_WORDS,

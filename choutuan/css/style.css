@@ -667,3 +667,9 @@ input { font: inherit; }
   max-width: 80%; text-align: center;
 }
 .toast.show { opacity: 1; }
+
+/* ---------- 售罄态（后台下架） ---------- */
+.soldout-tag {
+  display: inline-block; font-size: 11px; color: var(--text-3);
+  background: #F0F0F0; border-radius: 10px; padding: 3px 10px;
+}

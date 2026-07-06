@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>丑团管理后台</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="img/icon-32.png">
+  <style>
+    :root { --brand:#FFD100; --ink:#222; --ink2:#666; --ink3:#999; --bg:#F5F5F5; --line:#EEE; --red:#FF3B30; --green:#00B57C; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--ink); font-size:14px; }
+    .topbar { background:var(--brand); padding:14px 20px; display:flex; align-items:center; gap:12px; position:sticky; top:0; z-index:10; }
+    .topbar img { width:32px; height:32px; border-radius:8px; }
+    .topbar h1 { font-size:17px; }
+    .topbar .sp { flex:1; }
+    .tabs { display:flex; gap:6px; }
+    .tab-btn { padding:7px 16px; border:0; border-radius:16px; background:rgba(255,255,255,.5); font:inherit; cursor:pointer; }
+    .tab-btn.on { background:#2B2200; color:#FFD100; font-weight:600; }
+    .logout { border:0; background:none; font:inherit; color:#5c4a00; cursor:pointer; }
+    .wrap { max-width:960px; margin:0 auto; padding:16px; }
+    .card { background:#fff; border-radius:12px; padding:16px; margin-bottom:14px; }
+    /* 登录 */
+    .login { max-width:340px; margin:12vh auto; text-align:center; }
+    .login img { width:72px; height:72px; border-radius:16px; margin-bottom:12px; }
+    .login h2 { margin-bottom:16px; }
+    .login input { width:100%; padding:11px 14px; border:1px solid var(--line); border-radius:10px; font:inherit; margin-bottom:10px; background:#FAFAFA; }
+    .btn { display:inline-block; border:0; background:var(--brand); font:inherit; font-weight:600; padding:10px 26px; border-radius:20px; cursor:pointer; }
+    .btn.small { padding:5px 14px; font-weight:500; font-size:13px; }
+    .btn.ghost { background:#F0F0F0; }
+    .err { color:var(--red); font-size:13px; min-height:18px; }
+    /* 看板 */
+    .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; }
+    .stat { background:#fff; border-radius:12px; padding:16px; }
+    .stat b { display:block; font-size:26px; font-variant-numeric:tabular-nums; }
+    .stat span { color:var(--ink3); font-size:12px; }
+    .bars { display:flex; flex-direction:column; gap:8px; }
+    .bar-row { display:flex; align-items:center; gap:10px; font-size:12px; }
+    .bar-row .d { flex:0 0 76px; color:var(--ink2); }
+    .bar-track { flex:1; display:flex; flex-direction:column; gap:3px; }
+    .bar { height:10px; border-radius:5px; background:var(--brand); min-width:2px; }
+    .bar.o { background:var(--green); }
+    .bar-n { flex:0 0 110px; color:var(--ink3); text-align:right; }
+    /* 商品管理 */
+    .toolbar { display:flex; gap:10px; margin-bottom:12px; flex-wrap:wrap; align-items:center; }
+    .toolbar input, .toolbar select { padding:8px 12px; border:1px solid var(--line); border-radius:8px; font:inherit; background:#fff; }
+    .toolbar input { flex:1; min-width:180px; }
+    table { width:100%; border-collapse:collapse; background:#fff; border-radius:12px; overflow:hidden; }
+    th, td { padding:9px 10px; text-align:left; border-bottom:1px solid #F5F5F5; vertical-align:middle; }
+    th { background:#FAFAFA; font-size:12px; color:var(--ink2); font-weight:500; }
+    td img { width:40px; height:40px; border-radius:8px; object-fit:cover; display:block; }
+    td input[type=text] { width:150px; padding:5px 8px; border:1px solid var(--line); border-radius:6px; font:inherit; }
+    td input[type=number] { width:72px; padding:5px 8px; border:1px solid var(--line); border-radius:6px; font:inherit; }
+    .ovr { display:inline-block; font-size:10px; color:#B8860B; border:1px solid #E8C84A; border-radius:3px; padding:0 4px; margin-left:4px; }
+    .so { color:var(--red); }
+    .pager { display:flex; gap:8px; align-items:center; justify-content:center; padding:14px; color:var(--ink2); }
+    .toast { position:fixed; left:50%; bottom:40px; transform:translateX(-50%); background:rgba(0,0,0,.78); color:#fff; padding:9px 18px; border-radius:20px; opacity:0; transition:opacity .25s; pointer-events:none; z-index:99; }
+    .toast.show { opacity:1; }
+    .hide { display:none !important; }
+  </style>
+</head>
+<body>
+  <!-- 登录 -->
+  <div id="login" class="login card">
+    <img src="img/icon-192.png" alt="丑团">
+    <h2>丑团管理后台</h2>
+    <input id="pwd" type="password" placeholder="管理员密码" autocomplete="current-password">
+    <div id="login-err" class="err"></div>
+    <button class="btn" onclick="doLogin()">登 录</button>
+  </div>
+
+  <!-- 主界面 -->
+  <div id="main" class="hide">
+    <div class="topbar">
+      <img src="img/icon-192.png" alt="">
+      <h1>丑团管理后台</h1>
+      <div class="tabs">
+        <button class="tab-btn on" id="tab-goods" onclick="showTab('goods')">商品管理</button>
+        <button class="tab-btn" id="tab-stats" onclick="showTab('stats')">数据看板</button>
+      </div>
+      <div class="sp"></div>
+      <button class="logout" onclick="logout()">退出</button>
+    </div>
+
+    <div class="wrap">
+      <!-- 商品管理 -->
+      <div id="pane-goods">
+        <div class="toolbar">
+          <input id="q" placeholder="搜索商品名 / 店铺名…" oninput="page=1;renderGoods()">
+          <select id="shop-filter" onchange="page=1;renderGoods()"><option value="">全部店铺</option></select>
+          <label><input type="checkbox" id="only-ovr" onchange="page=1;renderGoods()"> 只看已修改</label>
+        </div>
+        <table>
+          <thead><tr><th>图</th><th>商品 / 店铺</th><th>名称（可改）</th><th>券后价</th><th>原价</th><th>售罄</th><th>操作</th></tr></thead>
+          <tbody id="goods-body"></tbody>
+        </table>
+        <div class="pager">
+          <button class="btn small ghost" onclick="page=Math.max(1,page-1);renderGoods()">上一页</button>
+          <span id="page-info"></span>
+          <button class="btn small ghost" onclick="page++;renderGoods()">下一页</button>
+        </div>
+      </div>
+
+      <!-- 数据看板 -->
+      <div id="pane-stats" class="hide">
+        <div class="stats" id="stat-cards"></div>
+        <div class="card" style="margin-top:14px">
+          <h3 style="margin-bottom:12px;font-size:15px">近 7 日趋势（黄=访问 / 绿=下单）</h3>
+          <div class="bars" id="trend"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="js/data.js"></script>
+  <script>
+    'use strict';
+    let token = sessionStorage.getItem('ct_admin_token') || '';
+    let overrides = {};   // pid -> override
+    let page = 1;
+    const PAGE_SIZE = 20;
+
+    const $ = id => document.getElementById(id);
+    function toast(msg) {
+      const t = $('toast'); t.textContent = msg; t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 1600);
+    }
+    async function api(path, opts = {}) {
+      opts.headers = Object.assign({ 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token }, opts.headers || {});
+      const res = await fetch(path, opts);
+      if (res.status === 401) { logout(); throw new Error('登录过期'); }
+      if (!res.ok) throw new Error((await res.json()).detail || res.status);
+      return res.json();
+    }
+
+    async function doLogin() {
+      $('login-err').textContent = '';
+      try {
+        const res = await fetch('/api/admin/login', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ password: $('pwd').value })
+        });
+        if (!res.ok) throw new Error((await res.json()).detail || '登录失败');
+        token = (await res.json()).token;
+        sessionStorage.setItem('ct_admin_token', token);
+        enter();
+      } catch (e) { $('login-err').textContent = e.message; }
+    }
+    $('pwd').addEventListener('keydown', e => { if (e.key === 'Enter') doLogin(); });
+
+    function logout() {
+      token = ''; sessionStorage.removeItem('ct_admin_token');
+      $('main').classList.add('hide'); $('login').classList.remove('hide');
+    }
+
+    async function enter() {
+      try {
+        const data = await api('/api/admin/overrides');
+        overrides = {};
+        data.overrides.forEach(o => overrides[o.pid] = o);
+      } catch (e) { return; }
+      $('login').classList.add('hide'); $('main').classList.remove('hide');
+      // 店铺筛选下拉
+      const sel = $('shop-filter');
+      if (sel.options.length === 1) {
+        CT_DATA.SHOPS.forEach(s => {
+          const o = document.createElement('option'); o.value = s.id; o.textContent = s.name; sel.appendChild(o);
+        });
+      }
+      renderGoods(); loadStats();
+    }
+
+    function showTab(t) {
+      $('tab-goods').classList.toggle('on', t === 'goods');
+      $('tab-stats').classList.toggle('on', t === 'stats');
+      $('pane-goods').classList.toggle('hide', t !== 'goods');
+      $('pane-stats').classList.toggle('hide', t !== 'stats');
+      if (t === 'stats') loadStats();
+    }
+
+    function esc(s) { return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;'); }
+
+    function allProducts() {
+      const list = [];
+      CT_DATA.SHOPS.forEach(s => s.products.forEach(p => list.push({ p, s })));
+      return list;
+    }
+
+    function effective(p) {
+      const o = overrides[p.id] || {};
+      return {
+        name: o.name || p.name,
+        price: o.price != null ? o.price : p.price,
+        origPrice: o.origPrice != null ? o.origPrice : p.origPrice,
+        soldout: !!o.soldout,
+        modified: !!overrides[p.id]
+      };
+    }
+
+    function renderGoods() {
+      const q = $('q').value.trim().toLowerCase();
+      const shop = $('shop-filter').value;
+      const onlyOvr = $('only-ovr').checked;
+      let rows = allProducts().filter(({ p, s }) => {
+        if (shop && s.id !== shop) return false;
+        if (onlyOvr && !overrides[p.id]) return false;
+        if (q && !(p.name + s.name).toLowerCase().includes(q)) return false;
+        return true;
+      });
+      const pages = Math.max(1, Math.ceil(rows.length / PAGE_SIZE));
+      if (page > pages) page = pages;
+      $('page-info').textContent = `第 ${page}/${pages} 页 · 共 ${rows.length} 款`;
+      rows = rows.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
+
+      $('goods-body').innerHTML = rows.map(({ p, s }) => {
+        const e = effective(p);
+        return `<tr data-pid="${p.id}">
+          <td><img src="img/${p.photo || p.id}.webp" loading="lazy" alt=""></td>
+          <td><div>${esc(p.name)}${e.modified ? '<span class="ovr">已改</span>' : ''}</div>
+              <div style="color:#999;font-size:12px">${esc(s.name)} · ${p.id}</div></td>
+          <td><input type="text" class="f-name" value="${esc(e.name)}"></td>
+          <td><input type="number" step="0.1" min="0" class="f-price" value="${e.price}"></td>
+          <td><input type="number" step="0.1" min="0" class="f-orig" value="${e.origPrice}"></td>
+          <td><input type="checkbox" class="f-so" ${e.soldout ? 'checked' : ''}></td>
+          <td><button class="btn small" onclick="saveRow('${p.id}',this)">保存</button>
+              ${e.modified ? `<button class="btn small ghost" onclick="resetRow('${p.id}')">重置</button>` : ''}</td>
+        </tr>`;
+      }).join('');
+    }
+
+    async function saveRow(pid, btn) {
+      const tr = btn.closest('tr');
+      const body = {
+        pid,
+        name: tr.querySelector('.f-name').value.trim(),
+        price: parseFloat(tr.querySelector('.f-price').value),
+        origPrice: parseFloat(tr.querySelector('.f-orig').value),
+        soldout: tr.querySelector('.f-so').checked
+      };
+      if (!(body.price >= 0) || !(body.origPrice >= 0)) return toast('价格不合法');
+      try {
+        await api('/api/admin/override', { method: 'PUT', body: JSON.stringify(body) });
+        overrides[pid] = body;
+        toast('已保存，用户端刷新即生效');
+        renderGoods();
+      } catch (e) { toast('保存失败：' + e.message); }
+    }
+
+    async function resetRow(pid) {
+      try {
+        await api('/api/admin/override/' + pid, { method: 'DELETE' });
+        delete overrides[pid];
+        toast('已重置为默认');
+        renderGoods();
+      } catch (e) { toast('重置失败：' + e.message); }
+    }
+
+    async function loadStats() {
+      let s;
+      try { s = await api('/api/admin/stats'); } catch (e) { return; }
+      $('stat-cards').innerHTML = [
+        ['今日访问', s.todayPv], ['今日下单', s.todayOrder],
+        ['累计访问', s.totalPv], ['累计下单', s.totalOrder],
+        ['下单总金额', '¥' + s.totalAmount], ['已改商品', s.overrides]
+      ].map(([k, v]) => `<div class="stat"><b>${v}</b><span>${k}</span></div>`).join('');
+      const max = Math.max(1, ...s.last7.map(d => Math.max(d.pv, d.orders)));
+      $('trend').innerHTML = s.last7.length ? s.last7.map(d =>
+        `<div class="bar-row"><span class="d">${d.day.slice(5)}</span>
+          <div class="bar-track">
+            <div class="bar" style="width:${Math.round(d.pv / max * 100)}%"></div>
+            <div class="bar o" style="width:${Math.round(d.orders / max * 100)}%"></div>
+          </div>
+          <span class="bar-n">${d.pv} 访问 / ${d.orders} 单</span></div>`
+      ).join('') : '<div style="color:#999">暂无数据，等用户访问后这里会出现趋势</div>';
+    }
+
+    if (token) enter();
+  </script>
+</body>
+</html>

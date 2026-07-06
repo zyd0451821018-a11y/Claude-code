@@ -166,6 +166,7 @@ var CT_APP = (function () {
       });
       closeOverlay();
       if (order) {
+        track('order', order.total);
         lastStage = -1;
         /* 结算页已随下单失效，重置返回栈避免回退到空结算页 */
         navStack.length = 0;
@@ -375,6 +376,34 @@ var CT_APP = (function () {
     render();
   }
 
+  /* ---------- 后台对接（可选增强：不可达时静默回退，前端零依赖可用） ---------- */
+  function track(type, amount) {
+    try {
+      if (typeof fetch !== 'function') return;
+      var body = JSON.stringify({ type: type, amount: amount });
+      if (typeof navigator !== 'undefined' && navigator.sendBeacon) {
+        navigator.sendBeacon('/api/track', new Blob([body], { type: 'application/json' }));
+      } else {
+        fetch('/api/track', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: body }).catch(function () {});
+      }
+    } catch (e) { /* 静默 */ }
+  }
+
+  function loadRemoteOverrides() {
+    try {
+      if (typeof fetch !== 'function') return;
+      fetch('/api/catalog', { cache: 'no-store' }).then(function (res) {
+        if (!res.ok) return null;
+        return res.json();
+      }).then(function (data) {
+        if (data && data.overrides && data.overrides.length) {
+          var n = DATA.applyOverrides(data.overrides);
+          if (n > 0) render(); // 覆盖生效后重绘当前页
+        }
+      }).catch(function () { /* 后台不可达：使用内置数据 */ });
+    } catch (e) { /* 静默 */ }
+  }
+
   /* ---------- 启动 ---------- */
   function init() {
     root = document.getElementById('app');
@@ -386,6 +415,8 @@ var CT_APP = (function () {
     if (!location.hash) location.hash = '#/home';
     render();
     setInterval(tick, 1000);
+    loadRemoteOverrides();
+    track('pv');
   }
 
   if (typeof document !== 'undefined') {
