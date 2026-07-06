@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>赛博灵签 · Cyber Oracle</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- ===== 问签页 ===== -->
+        <div id="input-page" class="page active">
+            <div class="brand">
+                <div class="brand-seal">签</div>
+                <h1 class="brand-title">赛博灵签</h1>
+                <p class="brand-sub">一签一问 · 诚心则灵</p>
+            </div>
+
+            <div class="input-section">
+                <label class="input-label" for="question-input">心中所问</label>
+                <textarea
+                    id="question-input"
+                    class="input-field"
+                    placeholder="静心默想，写下你最想问的一件事……"
+                    rows="3"
+                    maxlength="200"
+                ></textarea>
+            </div>
+
+            <div class="number-row">
+                <div class="input-section">
+                    <label class="input-label" for="number-input">报数（1-999）</label>
+                    <input
+                        id="number-input"
+                        class="input-field"
+                        type="number"
+                        min="1"
+                        max="999"
+                        placeholder="心中默念一个数字"
+                    >
+                </div>
+                <button id="random-btn" class="btn btn-secondary" title="随机掷数">掷</button>
+            </div>
+
+            <div class="gold-line"></div>
+
+            <div class="start-area">
+                <button id="start-btn" class="btn btn-primary" disabled>起卦摇签</button>
+            </div>
+        </div>
+
+        <!-- ===== 摇签页 ===== -->
+        <div id="shake-page" class="page">
+            <div class="shake-header">
+                <h2 id="shake-question" class="shake-question-text"></h2>
+                <div id="camera-status" class="camera-status">正在初始化摄像头…</div>
+            </div>
+
+            <div class="tube-container">
+                <div id="sign-tube" class="sign-tube">
+                    <svg viewBox="0 0 120 260" xmlns="http://www.w3.org/2000/svg">
+                        <!-- 签筒主体 -->
+                        <defs>
+                            <linearGradient id="tubeGrad" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0%" stop-color="#A0522D"/>
+                                <stop offset="30%" stop-color="#CD853F"/>
+                                <stop offset="50%" stop-color="#DEB887"/>
+                                <stop offset="70%" stop-color="#CD853F"/>
+                                <stop offset="100%" stop-color="#8B4513"/>
+                            </linearGradient>
+                            <linearGradient id="rimGrad" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0%" stop-color="#8B4513"/>
+                                <stop offset="50%" stop-color="#A0522D"/>
+                                <stop offset="100%" stop-color="#8B4513"/>
+                            </linearGradient>
+                        </defs>
+
+                        <!-- 筒身 -->
+                        <rect x="25" y="50" width="70" height="190" rx="6"
+                              fill="url(#tubeGrad)" stroke="#6B3A1F" stroke-width="1.5"/>
+
+                        <!-- 筒口 -->
+                        <ellipse cx="60" cy="52" rx="36" ry="10"
+                                 fill="url(#rimGrad)" stroke="#6B3A1F" stroke-width="1"/>
+                        <ellipse cx="60" cy="52" rx="30" ry="7"
+                                 fill="#3E2112" opacity="0.7"/>
+
+                        <!-- 竹签 -->
+                        <g class="tube-sticks">
+                            <line x1="45" y1="20" x2="48" y2="50" stroke="#D4A84B" stroke-width="3" stroke-linecap="round"/>
+                            <line x1="55" y1="15" x2="56" y2="50" stroke="#C99A3B" stroke-width="3" stroke-linecap="round"/>
+                            <line x1="65" y1="18" x2="64" y2="50" stroke="#D4A84B" stroke-width="3" stroke-linecap="round"/>
+                            <line x1="72" y1="22" x2="70" y2="50" stroke="#B8860B" stroke-width="3" stroke-linecap="round"/>
+                            <line x1="50" y1="24" x2="52" y2="50" stroke="#C99A3B" stroke-width="2.5" stroke-linecap="round"/>
+                        </g>
+
+                        <!-- 装饰 -->
+                        <rect x="25" y="110" width="70" height="1" fill="#6B3A1F" opacity="0.3"/>
+                        <text x="60" y="158" text-anchor="middle"
+                              font-family="KaiTi, STKaiti, serif"
+                              font-size="16" fill="#6B3A1F" opacity="0.5">灵</text>
+                    </svg>
+                </div>
+                <div id="falling-stick" class="falling-stick"></div>
+            </div>
+
+            <div id="shake-progress" class="shake-progress">
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+                <div id="progress-text" class="progress-text">0 / 6</div>
+            </div>
+
+            <div id="manual-shake-btn" class="manual-shake-btn" style="display:none">
+                <button class="btn btn-primary">摇签</button>
+            </div>
+            <p class="shake-hint">摇晃双手或点击按钮 · 空格键亦可</p>
+        </div>
+
+        <!-- ===== 解签页 ===== -->
+        <div id="result-page" class="page">
+            <div class="brand" style="margin-bottom:24px">
+                <div class="brand-seal" style="width:36px;height:36px;line-height:32px;font-size:1rem">签</div>
+            </div>
+            <div id="result-container"></div>
+        </div>
+
+    </div>
+
+    <script src="js/knowledge.js"></script>
+    <script src="js/ganzhi.js"></script>
+    <script src="js/oracle-data.js"></script>
+    <script src="js/methods.js"></script>
+    <script src="js/liuyao-engine.js"></script>
+    <script src="js/divination.js"></script>
+    <script src="js/hand-gesture.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
