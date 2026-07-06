@@ -219,6 +219,15 @@ async function main() {
     appHTML(win).includes('下单时段分布') && appHTML(win).includes('深夜时段') &&
     appHTML(win).includes('被你稳稳接住的冲动'));
 
+  // M24e 订单列表随配送阶段自动刷新
+  await nav(win, '#/orders');
+  const beforeLabel = text(win, '.oc-status');
+  clock += S.STEP_MS * 2 + 500; // 深夜单推进两阶段
+  win.CT_APP.__private.tick(); await sleep(10);
+  win.CT_APP.__private.tick(); await sleep(10);
+  check('M24e', '订单列表页随配送阶段推进自动刷新',
+    beforeLabel === '商家已接单' && text(win, '.oc-status') === '骑手已取货');
+
   /* ================= 边界用例 ================= */
   console.log('\n[边界]');
 

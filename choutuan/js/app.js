@@ -98,9 +98,19 @@ var CT_APP = (function () {
           if (eta) eta.textContent = V.fmtCountdown(S.etaMs(o));
         }
       }
+    } else if (r.name === 'orders') {
+      /* 列表页：任一在途订单跨过阶段边界时整页刷新（无输入控件，安全） */
+      var sig = S.orders().map(function (od) {
+        return od.received ? 'x' : S.deliveryStageIndex(od);
+      }).join(',');
+      if (sig !== lastOrdersSig && !overlayOpen()) {
+        lastOrdersSig = sig;
+        render();
+      }
     }
   }
   var lastStage = -1;
+  var lastOrdersSig = '';
 
   /* ---------- 覆盖层 ---------- */
   function showOverlay(html) { overlay.innerHTML = html; }
