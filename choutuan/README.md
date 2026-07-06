@@ -70,6 +70,16 @@ tools/              菜单规格 / 目录生成引擎 / 照片素材管线 / 打
   `tools/photo-map.json` 裁切出 `img/*.webp`。
 - 演示加速：配送每 15 秒推进一阶段（`js/state.js` 中的 `STEP_MS`），约 1 分钟走完全程。
 
+## 部署
+
+阿里云一键部署（ECS/Nginx 或 OSS 静态托管）见 [`deploy/README.md`](deploy/README.md)：
+
+```bash
+./deploy/deploy-ecs.sh root@<服务器IP>        # 方式一：ECS + Nginx（推荐）
+./deploy/deploy-oss.sh <bucket名> cn-hangzhou  # 方式二：OSS 静态网站托管
+node tools/build-artifact.js choutuan.html     # 方式三：3MB 单文件版
+```
+
 ## 测试
 
 ```bash
