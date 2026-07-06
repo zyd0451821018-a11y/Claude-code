@@ -20,6 +20,19 @@ var CT_VIEWS = (function () {
 
   function money(n) { return '¥' + S.yuan(n); }
 
+  /* 商品图 / 店招图（文件名由 id 派生，订单快照兼容）。
+     单文件打包时可通过全局 CT_IMG 映射注入 data URI。 */
+  function imgSrc(key) {
+    if (typeof window !== 'undefined' && window.CT_IMG && window.CT_IMG[key]) return window.CT_IMG[key];
+    return 'img/' + key + '.webp';
+  }
+  function pimg(pid, name) {
+    return '<img class="ph" src="' + imgSrc(pid) + '" alt="' + esc(name || '') + '" loading="lazy">';
+  }
+  function simg(sid, name) {
+    return '<img class="ph" src="' + imgSrc('shop_' + sid) + '" alt="' + esc(name || '') + '" loading="lazy">';
+  }
+
   function fmtTime(ms) {
     var d = new Date(ms);
     function p(x) { return x < 10 ? '0' + x : '' + x; }
@@ -119,7 +132,8 @@ var CT_VIEWS = (function () {
     /* 分类 */
     html += '<div class="cat-row">' + DATA.CATEGORIES.map(function (c) {
       return '<button class="cat-item' + (activeCat === c.id ? ' active' : '') + '" data-action="cat-filter" data-cat="' + c.id + '">' +
-        '<span class="cat-icon">' + c.icon + '</span><span class="cat-name">' + esc(c.name) + '</span></button>';
+        '<span class="cat-icon"><img class="ph" src="' + imgSrc('cat_' + c.id) + '" alt=""></span>' +
+        '<span class="cat-name">' + esc(c.name) + '</span></button>';
     }).join('') + '</div>';
 
     /* 限时秒杀 */
@@ -130,7 +144,7 @@ var CT_VIEWS = (function () {
       '<div class="seckill-scroll">' + seckills.map(function (e) {
         var p = e.product;
         return '<div class="seckill-card" data-action="nav" data-to="#/product/' + p.id + '">' +
-          '<div class="seckill-img">' + p.img + '</div>' +
+          '<div class="seckill-img">' + pimg(p.id, p.name) + '</div>' +
           '<div class="seckill-name">' + esc(p.name) + '</div>' +
           '<div class="seckill-price"><span class="price"><i>¥</i>' + S.yuan(p.price) + '</span>' +
           '<span class="orig-price">¥' + S.yuan(p.origPrice) + '</span></div>' +
@@ -155,7 +169,7 @@ var CT_VIEWS = (function () {
   function shopCard(s) {
     var recs = s.products.slice(0, 3);
     return '<div class="shop-card" data-action="nav" data-to="#/shop/' + s.id + '">' +
-      '<div class="shop-logo">' + s.logo + '</div>' +
+      '<div class="shop-logo">' + simg(s.id, s.name) + '</div>' +
       '<div class="shop-info">' +
       '<div class="shop-name">' + esc(s.name) + '</div>' +
       '<div class="shop-meta">' + stars(s.rating) +
@@ -166,7 +180,7 @@ var CT_VIEWS = (function () {
       '<span class="meta-item">配送¥' + S.yuan(s.deliveryFee) + '</span></div>' +
       '<div class="shop-promos">' + tagChips(s.promos) + '</div>' +
       '<div class="shop-recs">' + recs.map(function (p) {
-        return '<div class="rec-item"><span class="rec-img">' + p.img + '</span>' +
+        return '<div class="rec-item"><span class="rec-img">' + pimg(p.id, p.name) + '</span>' +
           '<span class="rec-name">' + esc(p.name) + '</span>' +
           '<span class="rec-price">¥' + S.yuan(p.price) + '</span></div>';
       }).join('') + '</div>' +
@@ -216,7 +230,7 @@ var CT_VIEWS = (function () {
   /* 通用商品行（搜索结果 / 店铺菜单共用） */
   function productRow(p, shop, showShop) {
     return '<div class="product-row">' +
-      '<div class="prod-img" data-action="nav" data-to="#/product/' + p.id + '">' + p.img + '</div>' +
+      '<div class="prod-img" data-action="nav" data-to="#/product/' + p.id + '">' + pimg(p.id, p.name) + '</div>' +
       '<div class="prod-main">' +
       '<div class="prod-name" data-action="nav" data-to="#/product/' + p.id + '">' + esc(p.name) + '</div>' +
       '<div class="prod-desc">' + esc(p.desc) + '</div>' +
@@ -247,7 +261,7 @@ var CT_VIEWS = (function () {
     html += '<div class="shop-hero">' +
       '<button class="nav-back on-hero" data-action="back" aria-label="返回">‹</button>' +
       '<div class="hero-body">' +
-      '<div class="hero-logo">' + s.logo + '</div>' +
+      '<div class="hero-logo">' + simg(s.id, s.name) + '</div>' +
       '<div class="hero-info"><div class="hero-name">' + esc(s.name) + '</div>' +
       '<div class="hero-meta">' + stars(s.rating) + '<span class="meta-item">月售' + s.monthlySales + '</span>' +
       '<span class="meta-item">约' + s.deliveryMin + '分钟</span></div>' +
@@ -303,7 +317,7 @@ var CT_VIEWS = (function () {
 
     var html = '<div class="page page-product">';
     html += navbar('商品详情');
-    html += '<div class="prod-hero">' + p.img + '</div>';
+    html += '<div class="prod-hero">' + pimg(p.id, p.name) + '</div>';
     html += '<div class="card prod-detail-card">' +
       '<div class="pd-price-row">' + priceBlock(p) +
       '<span class="pd-sales">月售' + p.sales + '</span></div>' +
@@ -312,7 +326,7 @@ var CT_VIEWS = (function () {
       '<div class="pd-tags">' + tagChips(p.tags) + '</div></div>';
 
     html += '<div class="card shop-entry" data-action="nav" data-to="#/shop/' + s.id + '">' +
-      '<span class="se-logo">' + s.logo + '</span>' +
+      '<span class="se-logo">' + simg(s.id, s.name) + '</span>' +
       '<span class="se-name">' + esc(s.name) + '</span>' +
       '<span class="se-meta">' + stars(s.rating) + ' · 月售' + s.monthlySales + '</span>' +
       '<span class="se-go">进店 ›</span></div>';
@@ -355,11 +369,11 @@ var CT_VIEWS = (function () {
         var reachMin = g.subtotal >= s.minOrder;
         return '<div class="card cart-group">' +
           '<div class="cg-head" data-action="nav" data-to="#/shop/' + s.id + '">' +
-          '<span class="cg-logo">' + s.logo + '</span><span class="cg-name">' + esc(s.name) + '</span><span class="cg-go">›</span></div>' +
+          '<span class="cg-logo">' + simg(s.id, s.name) + '</span><span class="cg-name">' + esc(s.name) + '</span><span class="cg-go">›</span></div>' +
           g.items.map(function (it) {
             var p = it.product;
             return '<div class="cart-item">' +
-              '<div class="ci-img" data-action="nav" data-to="#/product/' + p.id + '">' + p.img + '</div>' +
+              '<div class="ci-img" data-action="nav" data-to="#/product/' + p.id + '">' + pimg(p.id, p.name) + '</div>' +
               '<div class="ci-main"><div class="ci-name">' + esc(p.name) + '</div>' +
               '<div class="ci-price">' + priceBlock(p) + '</div></div>' +
               '<div class="ci-right">' + stepper(p.id) +
@@ -408,10 +422,10 @@ var CT_VIEWS = (function () {
       }).join('') + '</div></div>';
 
     /* 商品明细 */
-    html += '<div class="card"><div class="co-shop"><span class="cg-logo">' + s.logo + '</span>' + esc(s.name) + '</div>' +
+    html += '<div class="card"><div class="co-shop"><span class="cg-logo">' + simg(s.id, s.name) + '</span>' + esc(s.name) + '</div>' +
       sum.group.items.map(function (it) {
         var p = it.product;
-        return '<div class="co-item"><span class="co-img">' + p.img + '</span>' +
+        return '<div class="co-item"><span class="co-img">' + pimg(p.id, p.name) + '</span>' +
           '<span class="co-name">' + esc(p.name) + '</span>' +
           '<span class="co-qty">x' + it.qty + '</span>' +
           '<span class="co-price">' + money(p.price * it.qty) + '</span></div>';
@@ -506,7 +520,7 @@ var CT_VIEWS = (function () {
     /* 假地图 + 骑手卡 */
     html += '<div class="map-box"><div class="map-route"></div>' +
       '<div class="map-rider" style="left:' + (8 + Math.min(stageIdx, 4) * 20) + '%">' + o.rider.avatar + '</div>' +
-      '<div class="map-home">🏠</div><div class="map-shop">' + o.shopLogo + '</div></div>';
+      '<div class="map-home">🏠</div><div class="map-shop">' + simg(o.shopId, o.shopName) + '</div></div>';
     html += '<div class="card rider-card"><span class="rc-avatar">' + o.rider.avatar + '</span>' +
       '<div class="rc-main"><div class="rc-name">' + esc(o.rider.name) + '</div>' +
       '<div class="rc-sub">' + (done || delivered ? '本单配送已完成' : '正在为您配送') + '</div></div>' +
@@ -524,9 +538,9 @@ var CT_VIEWS = (function () {
 
     /* 订单明细 */
     html += '<div class="card"><div class="co-shop" data-action="nav" data-to="#/shop/' + o.shopId + '">' +
-      '<span class="cg-logo">' + o.shopLogo + '</span>' + esc(o.shopName) + ' ›</div>' +
+      '<span class="cg-logo">' + simg(o.shopId, o.shopName) + '</span>' + esc(o.shopName) + ' ›</div>' +
       o.items.map(function (it) {
-        return '<div class="co-item"><span class="co-img">' + it.img + '</span>' +
+        return '<div class="co-item"><span class="co-img">' + pimg(it.pid, it.name) + '</span>' +
           '<span class="co-name">' + esc(it.name) + '</span>' +
           '<span class="co-qty">x' + it.qty + '</span>' +
           '<span class="co-price">' + money(it.price * it.qty) + '</span></div>';
@@ -584,7 +598,7 @@ var CT_VIEWS = (function () {
         var itemsSummary = o.items.map(function (it) { return it.name + 'x' + it.qty; }).join('、');
         return '<div class="card order-card">' +
           '<div class="oc-head" data-action="nav" data-to="#/order/' + o.id + '">' +
-          '<span class="cg-logo">' + o.shopLogo + '</span><span class="oc-shop">' + esc(o.shopName) + '</span>' +
+          '<span class="cg-logo">' + simg(o.shopId, o.shopName) + '</span><span class="oc-shop">' + esc(o.shopName) + '</span>' +
           '<span class="oc-status ' + statusCls + '">' + statusLabel + '</span></div>' +
           '<div class="oc-body" data-action="nav" data-to="#/order/' + o.id + '">' +
           '<div class="oc-items">' + esc(itemsSummary) + '</div>' +
@@ -656,7 +670,7 @@ var CT_VIEWS = (function () {
       html += entries.map(function (e) {
         var p = e.product, s = e.shop;
         return '<div class="card fav-row">' +
-          '<div class="prod-img" data-action="nav" data-to="#/product/' + p.id + '">' + p.img + '</div>' +
+          '<div class="prod-img" data-action="nav" data-to="#/product/' + p.id + '">' + pimg(p.id, p.name) + '</div>' +
           '<div class="prod-main"><div class="prod-name" data-action="nav" data-to="#/product/' + p.id + '">' + esc(p.name) + '</div>' +
           '<div class="prod-meta"><span class="meta-item shop-link" data-action="nav" data-to="#/shop/' + s.id + '">' + esc(s.name) + ' ›</span></div>' +
           '<div class="prod-bottom">' + priceBlock(p) + stepper(p.id) + '</div></div>' +
@@ -740,7 +754,7 @@ var CT_VIEWS = (function () {
         '<div class="ic-text">有 <b>' + r.resisted.length + '</b> 件商品被你收藏后一直没有下单，约 <b>' +
         money(r.resistedAmount) + '</b>。想要但没买，也是一种选择。</div>' +
         '<div class="resist-list">' + r.resisted.slice(0, 6).map(function (e) {
-          return '<div class="resist-item"><span>' + e.product.img + '</span>' +
+          return '<div class="resist-item"><span class="ri-img">' + pimg(e.product.id, e.product.name) + '</span>' +
             '<span class="ri-name">' + esc(e.product.name) + '</span>' +
             '<span class="ri-price">' + money(e.product.price) + '</span></div>';
         }).join('') + '</div></div>';

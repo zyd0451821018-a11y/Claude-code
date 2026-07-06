@@ -80,6 +80,11 @@ async function main() {
   check('M2', '限时秒杀区存在且倒计时为 HH:MM:SS 格式',
     $$(win, '.seckill-card').length > 0 && /^\d{2}:\d{2}:\d{2}$/.test(cd));
 
+  // M2a 真实产品图渲染（店招 + 商品图均为 webp img 标签）
+  check('M2a', '店铺卡与秒杀位渲染真实产品图（非 emoji）',
+    appHTML(win).includes('img/shop_s01.webp') && /img\/p\d{4}\.webp/.test(appHTML(win)) &&
+    $$(win, '.shop-logo img.ph').length === 16);
+
   // M3 分类筛选
   click(win, $$(win, '.cat-item').find(el => el.dataset.cat === 'milktea'));
   await sleep(10);
