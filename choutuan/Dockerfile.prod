@@ -7,6 +7,8 @@ FROM nginx:1.27-alpine
 
 # 站点文件（纯静态，无构建步骤）
 COPY index.html /usr/share/nginx/html/index.html
+COPY favicon.ico /usr/share/nginx/html/favicon.ico
+COPY site.webmanifest /usr/share/nginx/html/site.webmanifest
 COPY css /usr/share/nginx/html/css
 COPY js /usr/share/nginx/html/js
 COPY img /usr/share/nginx/html/img
