@@ -43,6 +43,43 @@
                 <button id="random-btn" class="btn btn-secondary" title="随机掷数">掷</button>
             </div>
 
+            <details class="birth-section">
+                <summary>补充生辰（可选）· 紫微斗数精确排盘</summary>
+                <div class="birth-fields">
+                    <div class="birth-field">
+                        <label class="input-label" for="birth-date">出生日期（公历）</label>
+                        <input id="birth-date" class="input-field" type="date" min="1920-01-01" max="2020-12-31">
+                    </div>
+                    <div class="birth-field birth-field-half">
+                        <label class="input-label" for="birth-hour">时辰</label>
+                        <select id="birth-hour" class="input-field">
+                            <option value="">不确定</option>
+                            <option value="0">早子时 00-01</option>
+                            <option value="2">丑时 01-03</option>
+                            <option value="4">寅时 03-05</option>
+                            <option value="6">卯时 05-07</option>
+                            <option value="8">辰时 07-09</option>
+                            <option value="10">巳时 09-11</option>
+                            <option value="12">午时 11-13</option>
+                            <option value="14">未时 13-15</option>
+                            <option value="16">申时 15-17</option>
+                            <option value="18">酉时 17-19</option>
+                            <option value="20">戌时 19-21</option>
+                            <option value="22">亥时 21-23</option>
+                            <option value="23">晚子时 23-00</option>
+                        </select>
+                    </div>
+                    <div class="birth-field birth-field-half">
+                        <label class="input-label" for="birth-gender">性别</label>
+                        <select id="birth-gender" class="input-field">
+                            <option value="男">男</option>
+                            <option value="女">女</option>
+                        </select>
+                    </div>
+                </div>
+                <p class="birth-hint">感情、姻缘类问签将以生辰起紫微命盘，安十四主星、四化、大限，解读更精确。</p>
+            </details>
+
             <div class="gold-line"></div>
 
             <div class="start-area">
@@ -130,7 +167,10 @@
 
     <script src="js/knowledge.js"></script>
     <script src="js/ganzhi.js"></script>
+    <script src="js/lunar.js"></script>
     <script src="js/oracle-data.js"></script>
+    <script src="js/ziwei-data.js"></script>
+    <script src="js/ziwei-engine.js"></script>
     <script src="js/methods.js"></script>
     <script src="js/liuyao-engine.js"></script>
     <script src="js/divination.js"></script>

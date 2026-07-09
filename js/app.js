@@ -8,6 +8,7 @@ const App = (() => {
     let userNumber = 0;
     let shakeCount = 0;
     let useCamera = false;
+    let birthInfo = null;
     const REQUIRED_SHAKES = 6;
 
     const elements = {};
@@ -73,6 +74,8 @@ const App = (() => {
 
         if (!question || !userNumber) return;
 
+        birthInfo = readBirthInfo();
+
         showPage('shake');
         elements.shakeQuestion.textContent = question;
 
@@ -104,6 +107,27 @@ const App = (() => {
         elements.cameraStatus.textContent = '未检测到摄像头，请点击按钮摇签';
         elements.cameraStatus.className = 'camera-status fallback';
         elements.manualShakeBtn.style.display = 'block';
+    }
+
+    // 读取生辰信息（可选，供紫微斗数排盘）
+    function readBirthInfo() {
+        const dateEl = document.getElementById('birth-date');
+        const hourEl = document.getElementById('birth-hour');
+        const genderEl = document.getElementById('birth-gender');
+        if (!dateEl || !dateEl.value) return null;
+
+        const parts = dateEl.value.split('-').map(Number);
+        if (parts.length !== 3 || parts.some(isNaN)) return null;
+
+        // 时辰不确定时按午时（11-13）排盘
+        const hour = hourEl && hourEl.value !== '' ? parseInt(hourEl.value) : 12;
+        return {
+            year: parts[0],
+            month: parts[1],
+            day: parts[2],
+            hour,
+            gender: genderEl ? genderEl.value : '男'
+        };
     }
 
     function manualShake() {
@@ -170,7 +194,7 @@ const App = (() => {
         }
 
         setTimeout(() => {
-            const result = window.Divination.performDivination(question, userNumber, shakeCount);
+            const result = window.Divination.performDivination(question, userNumber, shakeCount, birthInfo);
             showPage('result');
             window.Divination.renderResult(elements.resultContainer);
         }, 1500);

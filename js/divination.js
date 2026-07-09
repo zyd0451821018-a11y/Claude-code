@@ -5,8 +5,8 @@
 const Divination = (() => {
     let currentResult = null;
 
-    function performDivination(question, userNumber, shakeCount) {
-        const divinationResult = window.DivinationMethods.divine(question, userNumber, shakeCount);
+    function performDivination(question, userNumber, shakeCount, birthInfo) {
+        const divinationResult = window.DivinationMethods.divine(question, userNumber, shakeCount, birthInfo);
         const signId = matchSign(divinationResult.fortune, userNumber);
         const sign = window.OracleData.getSignById(signId);
 
@@ -137,15 +137,56 @@ const Divination = (() => {
                         ${divination.method === '六爻' && divination.lines ? renderLiuyaoPaipan(divination) : ''}
                         ${divination.mainStar ? `
                         <div class="detail-item">
-                            <span class="detail-label">命宫主星</span>
+                            <span class="detail-label">${divination.chart ? '所问宫位主星' : '命宫主星'}</span>
                             <span class="detail-value">${divination.mainStar}（${divination.mainPalace}）</span>
                         </div>` : ''}
+                        ${divination.chart ? renderZiweiChart(divination) : ''}
                     </div>
                 </details>
 
                 <button class="btn btn-primary restart-btn" onclick="window.App && window.App.restart()">再问一签</button>
             </div>
         `;
+    }
+
+    function renderZiweiChart(divination) {
+        if (!window.ZiweiEngine || !divination.chart) return '';
+        const chart = divination.chart;
+
+        let html = '';
+        html += `
+            <div class="detail-item">
+                <span class="detail-label">五行局</span>
+                <span class="detail-value">${chart.fiveElements.name}</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">农历生辰</span>
+                <span class="detail-value">${chart.lunarDateCn} ${chart.timeCn}</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">生年四化</span>
+                <span class="detail-value">${chart.yearSihua['禄']}化禄 ${chart.yearSihua['权']}化权 ${chart.yearSihua['科']}化科 ${chart.yearSihua['忌']}化忌</span>
+            </div>`;
+
+        // 星曜档案（有主见解读：原型 + 类比）
+        if (divination.starProfiles && divination.starProfiles.length > 0) {
+            html += '<div class="star-profiles">';
+            for (const p of divination.starProfiles) {
+                html += `
+                    <div class="star-profile">
+                        <div class="star-profile-head">
+                            <span class="star-profile-name">${p.name}</span>
+                            <span class="star-profile-archetype">${p.data.archetype}</span>
+                        </div>
+                        <p class="star-profile-analogy">「${p.data.analogy}」</p>
+                        <p class="star-profile-detail">优势：${p.data.strengths}<br>提醒：${p.data.risks}</p>
+                    </div>`;
+            }
+            html += '</div>';
+        }
+
+        html += window.ZiweiEngine.renderMingpan(chart);
+        return html;
     }
 
     function renderLiuyaoPaipan(divination) {
